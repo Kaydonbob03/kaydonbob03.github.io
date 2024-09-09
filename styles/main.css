@@ -39,6 +39,10 @@ body.dark-mode {
     background-color: var(--background-color-dark);
 }
 
+#about-me h2 {
+    text-align: center;
+  }
+
 /* Header styles */
 .header-class {
     display: flex;
