@@ -178,6 +178,7 @@ body.dark-mode .width-wrap {
     #about-me .profile-pic {
         width: 300px;
         height: 400px;
+        align-items: center;
         object-fit: cover;
       }
     }
