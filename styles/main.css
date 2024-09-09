@@ -1,0 +1,247 @@
+:root {
+    --text-color-light: #000000;
+    --background-color-light: #ffffff;
+    --text-color-dark: #ffffff;
+    --text-color-dark-foot: #000000;
+    --background-color-dark: #333333;
+    --header-footer-color-light: #ffff00;
+    --header-footer-color-dark: #FFD700;
+    --link-color-light: #FFD700; 
+    --link-color-dark: #09e1ec; 
+}
+
+/* Styles for hyperlinks in light mode */
+body:not(.dark-mode) a {
+    color: var(--link-color-light);
+    text-decoration: none;
+}
+
+/* Styles for hyperlinks in dark mode */
+body.dark-mode a {
+    color: var(--link-color-dark);
+}
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+body.dark-mode {
+    color: var(--text-color-dark);
+    background-color: var(--background-color-dark);
+}
+
+/* Header styles */
+.header-class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: var(--header-footer-color-light);
+    color: #333;
+}
+
+.title-div {
+    text-align: center;
+    flex-grow: 1;
+}
+
+#mode-icon {
+    width: 40px; 
+    height: auto; 
+}
+
+#mode-toggle-container {
+    padding: 10px;
+}
+
+#mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode .header-class {
+    background-color: var(--header-footer-color-dark);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger-menu div {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--text-color-light);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.hamburger-menu.toggle div:nth-child(1) {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburger-menu.toggle div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.toggle div:nth-child(3) {
+    transform: rotate(45deg) translate(-9px, -6px);
+}
+
+/* Navigation styles */
+.nav-class {
+    display: none;
+    justify-content: space-around;
+    background-color: var(--header-footer-color-light);
+    padding: 10px 0;
+}
+
+.nav-class.show {
+    display: flex;
+}
+
+body.dark-mode .nav-class {
+    background-color: var(--header-footer-color-dark);
+}
+
+.nav-class ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-class li {
+    margin: 0 10px;
+}
+
+.nav-class a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .nav-class a {
+    color: var(--text-color-dark);
+    background-color: #777;
+}
+
+.nav-class a:hover {
+    background-color: #777;
+}
+
+.width-wrap {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2em 2em;
+    margin-bottom: 3em;
+    flex: 1 0 auto;
+    background-color: var(--background-color-light);
+}
+
+body.dark-mode .width-wrap {
+    background-color: var(--background-color-dark);
+}
+
+/* Main content styles */
+.main-class {
+    padding: 20px;
+    background-color: var(--background-color-light);
+    margin-bottom: 40px; 
+}
+
+body.dark-mode .main-class {
+    background-color: var(--background-color-dark);
+}
+
+/* Footer styles */
+.footer-class {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+body.dark-mode .footer-class {
+    background-color: var(--header-footer-color-dark);
+    color: var(--text-color-dark-foot);
+}
+
+.foot {
+    width: 100%;
+    text-align: center;
+}
+
+footer hr {
+    width: calc(50vw - 300px);
+    max-width: 890px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border: none;
+    border-bottom: 3px dotted #da0a0a;
+}
+
+/* Light mode code block styles (VS Code dark theme) */
+code {
+    background-color: #1E1E1E; /* VS Code dark background color */
+    color: #D4D4D4; /* VS Code light text color */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-family: monospace;
+}
+
+/* Dark mode code block styles (VS Code light theme) */
+body.dark-mode code {
+    background-color: #FCFCFC; /* VS Code light background color */
+    color: #333333; /* VS Code dark text color */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-class {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-class li {
+        margin: 10px 0;
+    }
+
+    .width-wrap {
+        padding: 0 1em;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-class {
+        justify-content: center;
+    }
+}

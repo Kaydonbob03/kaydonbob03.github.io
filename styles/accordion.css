@@ -1,0 +1,38 @@
+/* accordian for commands.html */
+
+.accordion-header {
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content.active {
+    max-height: 500px; /* Adjust this value based on your content */
+}
+
+.accordion-item {
+    border-top: 1px solid var(--text-color-light);
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+body.dark-mode .accordion-item {
+    border-top: 1px solid var(--text-color-dark);
+    border-bottom: 1px solid var(--text-color-dark);
+}
+
+.accordion-header::after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.accordion-header.active::after {
+    content: "-";
+}
