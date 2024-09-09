@@ -173,12 +173,14 @@ body.dark-mode .width-wrap {
 #about-me h3 {
     text-align: center;
   }
+
 #about-me img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+    #about-me .profile-pic {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
 
 .main-class {
     padding: 20px;
