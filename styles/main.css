@@ -174,6 +174,9 @@ body.dark-mode .width-wrap {
     text-align: center;
   }
 
+#about-me img {
+    display: center;
+}
 .main-class {
     padding: 20px;
     background-color: var(--background-color-light);
