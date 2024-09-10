@@ -170,13 +170,21 @@ body.dark-mode .width-wrap {
 
 /* Main content styles */
 
+#about-me {
+    display: grid;
+    justify-items: center;
+}
+
+#about-me .accordion {
+    justify-self: start; 
+    width: 100%; 
+}
+
 #about-me h3 {
     text-align: center;
   }
 
-#about-me img {
-    margin-left: 305px;
-}
+
 .main-class {
     padding: 20px;
     background-color: var(--background-color-light);
