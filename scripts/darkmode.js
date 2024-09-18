@@ -18,8 +18,8 @@ let darkMode = localStorage.getItem('darkMode') || (window.matchMedia("(prefers-
 
 if (darkMode === "dark") {
     document.body.classList.add('dark-mode');
-    document.getElementById('mode-icon').src = 'images/mode1.png';
+    document.getElementById('mode-icon').src = '../images/mode1.png';
 } else {
     document.body.classList.remove('dark-mode');
-    document.getElementById('mode-icon').src = 'images/mode.png';
+    document.getElementById('mode-icon').src = '../images/mode.png';
 }
