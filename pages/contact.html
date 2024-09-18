@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kayden Cormier - Contact Me</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Kayden Cormier -- K-GamesMedia" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/accordion.css" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+</head>
+
+<body class="body-class">
+
+    <header class="header-class">
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="title-div">
+            <h1>Kayden Cormier - Contact Me</h1>
+        </div>
+
+        <div id="mode-toggle-container">
+            <button id="mode-toggle">
+                <img id="mode-icon" src="../images/mode.png" alt="Toggle mode">
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav-class">
+        <div class="nav-list-div">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/portfolio.html">My Portfolio</a></li>
+                <li><a href="../pages/about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="width-wrap">
+        <main class="main-class">
+            <section id="contact-me">
+                <h3>Contact Me</h3>
+                <div class="contact-details">
+                    <p>Email: <a href="mailto:kayden@kaydencormier.dev">kayden@kaydencormier.dev</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/kayden-cormier/" target="_blank">Kayden Cormier</a></p>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xvgpjozg" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer-class">
+        <div class="foot">
+            <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/hamburger.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/accordion.js"></script>
+</body>
+
+</html>

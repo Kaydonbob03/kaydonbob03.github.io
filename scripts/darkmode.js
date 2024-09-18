@@ -4,11 +4,11 @@ document.getElementById('mode-toggle').addEventListener('click', function() {
 
     if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
-        modeIcon.src = "images/mode.png";
+        modeIcon.src = "../images/mode.png";
         localStorage.setItem('darkMode', 'light'); // Store theme in local storage
     } else {
         body.classList.add('dark-mode');
-        modeIcon.src = "images/mode1.png";
+        modeIcon.src = "../images/mode1.png";
         localStorage.setItem('darkMode', 'dark'); // Store theme in local storage
     }
 });
