@@ -51,24 +51,45 @@
             <section id="portfolio">
                 <h3>My Portfolio</h3>
                 <div class="tab">
-                    <button class="tablinks" onclick="openProject(event, 'Project1')">Project 1</button>
-                    <button class="tablinks" onclick="openProject(event, 'Project2')">Project 2</button>
-                    <button class="tablinks" onclick="openProject(event, 'Project3')">Project 3</button>
+                    <button class="tablinks" onclick="openProject(event, 'Project1')">My Projects</button>
+                    <button class="tablinks" onclick="openProject(event, 'Project2')">Personal Webpage</button>
+                    <button class="tablinks" onclick="openProject(event, 'Project3')">Discord Bot</button>
+                    <button class="tablinks" onclick="openProject(event, 'Project4')">GPT Work</button>
                 </div>
 
                 <div id="Project1" class="tabcontent">
-                    <h4>Project 1</h4>
-                    <p>Details about Project 1...</p>
+                    <h4>My Projects</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
 
                 <div id="Project2" class="tabcontent">
-                    <h4>Project 2</h4>
-                    <p>Details about Project 2...</p>
+                    <h4>Personal Webpage</h4>
+
+                    <img src="https://picsum.photos/300/200" alt="Personal Webpage" class="project-image" width="300px" height="200px"/>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
 
                 <div id="Project3" class="tabcontent">
-                    <h4>Project 3</h4>
-                    <p>Details about Project 3...</p>
+                    <h4>Discord Bot</h4>
+                    <img src="https://picsum.photos/310/210" alt="Personal Webpage" class="project-image" width="310px" height="210px"/>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+
+                <div id="Project4" class="tabcontent">
+                    <h4>GPT Work</h4>
+                    <img src="https://picsum.photos/400/200" alt="Personal Webpage" class="project-image" width="400px" height="200px"/>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
             </section>
         </main>
@@ -92,26 +113,7 @@
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/accordion.js"></script>
     <script src="scripts/top.js"></script>
-    <script>
-        function openProject(evt, projectName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(projectName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        // Open the first tab by default
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector(".tablinks").click();
-        });
-    </script>
+    <script src="scripts/tabs.js"></script>
 </body>
 
 </html>
