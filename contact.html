@@ -69,6 +69,39 @@
         </main>
     </div>
 
+    <div id="coffee">
+        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+    </div>
+
+    <div> 
+        <button id="back-to-top" title="Back to top">⇡</button>
+
+        <script>
+            // Get the button
+            let backToTopButton = document.getElementById("back-to-top");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            backToTopButton.onclick = function() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            };
+        </script>
+
+    </div>
+
     <footer class="footer-class">
         <div class="foot">
             <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
