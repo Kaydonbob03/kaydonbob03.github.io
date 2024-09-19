@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kayden Cormier - My Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Kayden Cormier -- K-GamesMedia" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/accordion.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body class="body-class">
+
+    <header class="header-class">
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="title-div">
+            <h1>Kayden Cormier - My Portfolio</h1>
+        </div>
+
+        <div id="mode-toggle-container">
+            <button id="mode-toggle">
+                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav-class">
+        <div class="nav-list-div">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">My Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="width-wrap">
+        <main class="main-class">
+            <section id="portfolio">
+                <h3>My Portfolio</h3>
+                <div class="tab">
+                    <button class="tablinks" onclick="openProject(event, 'Project1')">Project 1</button>
+                    <button class="tablinks" onclick="openProject(event, 'Project2')">Project 2</button>
+                    <button class="tablinks" onclick="openProject(event, 'Project3')">Project 3</button>
+                </div>
+
+                <div id="Project1" class="tabcontent">
+                    <h4>Project 1</h4>
+                    <p>Details about Project 1...</p>
+                </div>
+
+                <div id="Project2" class="tabcontent">
+                    <h4>Project 2</h4>
+                    <p>Details about Project 2...</p>
+                </div>
+
+                <div id="Project3" class="tabcontent">
+                    <h4>Project 3</h4>
+                    <p>Details about Project 3...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="coffee">
+        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;"></a>
+    </div>
+
+    <div> 
+        <button id="back-to-top" title="Back to top">⇡</button>
+    </div>
+
+    <footer class="footer-class">
+        <div class="foot">
+            <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+        </div>
+    </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/accordion.js"></script>
+    <script src="scripts/top.js"></script>
+    <script>
+        function openProject(evt, projectName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(projectName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the first tab by default
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".tablinks").click();
+        });
+    </script>
+</body>
+
+</html>
