@@ -427,3 +427,7 @@ body.dark-mode .tabcontent {
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
 }
+
+#split {
+    text-align: center;
+}
