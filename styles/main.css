@@ -431,3 +431,11 @@ body.dark-mode .tabcontent {
 #split {
     text-align: center;
 }
+
+.github-logo {
+    filter: invert(0%);
+}
+
+body.dark-mode .github-logo {
+    filter: invert(100%);
+}
