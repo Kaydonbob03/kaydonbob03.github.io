@@ -1,0 +1,4 @@
+# ignore webhook work in progress stuff cause apparently it cant be done in github pages and i need an external server stuff, so this can wait
+/scripts/webhook.js
+/scripts/api-status.js
+api-status.html
