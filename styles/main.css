@@ -245,6 +245,22 @@ body.dark-mode .github-icon {
     filter: invert(0%);
 }
 
+/* Light mode code block styles (VS Code dark theme) */
+code {
+    background-color: #1E1E1E; /* VS Code dark background color */
+    color: #D4D4D4; /* VS Code light text color */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-family: monospace;
+}
+
+/* Dark mode code block styles (VS Code light theme) */
+body.dark-mode code {
+    background-color: #FCFCFC; /* VS Code light background color */
+    color: #333333; /* VS Code dark text color */
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .nav-class {
