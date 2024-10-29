@@ -263,9 +263,21 @@ body.dark-mode code {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+    .header-class {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .title-div {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     .nav-class {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .nav-class li {
@@ -274,6 +286,28 @@ body.dark-mode code {
 
     .width-wrap {
         padding: 0 1em;
+    }
+
+    .footer-class {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    #back-to-top {
+        position: fixed;
+        bottom: 70px; /* Adjusted to ensure it doesn't overlap with the footer */
+        right: 30px;
     }
 }
 
@@ -454,6 +488,14 @@ body.dark-mode .tabcontent {
 
 body.dark-mode .github-logo {
     filter: invert(100%);
+}
+
+.project-image {
+    content: url('images/logo_light_mode.png');
+}
+
+body.dark-mode .project-image {
+    content: url('images/logo_dark_mode.png');
 }
 
 #not-found {

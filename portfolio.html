@@ -201,11 +201,83 @@
 
                 <div id="Project5" class="tabcontent">
                     <h4>K-Games&Collectables</h4>
-                    <img src="https://picsum.photos/300/300" alt="Personal Webpage" class="project-image" width="400px" height="300px"/>
+                        <img src="images/logo_light_mode.png" alt="K-Games & Collectables" class="project-image" width="200px" height="200px"/>
                     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>This one is a bit tricky. This is my hobby/collectibles small business.</p> 
+                    <p>This project includes a bunch of sub-projects of mine.</p> 
+                    <p>These projects range from an online store, an inventory management app, a card search application, to a whole API I want to make.</p>
+                    <p>All these projects are a work in progress and will take a long time to finish them all.</p>
+                
+                    <h5><u>Online Store</u></h5>
+                    <p>An e-commerce platform for selling hobby and collectible items. I own the domain for it (I need to transfer the domain from SquareSpace to my Namecheap account so I can have more DNS access), there is nothing there right now, but the site can be found at <a href="https://kgamesncollectables.com"></a></p>
+                    <p>I also do have an email service for my domain through google admin, you can contact me at <a href="mailto:support@kgamesncollectables.com">support@kgamesncollectables.com</a></p>
+                    
+                    <h6><u>History</u></h6>
+                    <p>The online store was initially launched in 2022 as a platform to sell hobby and collectible items. However it was made in squarespace, and I couldnt rationalize spending $50 a month for its hosting, it didnt even include API access to my own site, unless i paid $80/month. I dont have a lot of customers, in fact like none online, my only customers are ebay customers I am trying to move over to my website, but it now doesnt exist. My customers also include people I know irl, either friends/family, or custoemrs ive made via platforms like facebook marketplace, or by talking to people at an actual local games store here in town. Those customers usually just let me know what they want, and i'll invoice them for the items and than purchase the items through the distributors i have access to and than let them know when they can pick up, or ill deliver to them.</p>
+                    <p>Now, I am hoping to make my own site for this, but the hosting is going to be a problem. I cant afford any server infrastructure right now. Any website i have up right now is run through github pages, this can't be run through there cause i need things like api keys to be private, and i'll need some node.js stuff and other web server stuff not aviliable with github pages</p>
+                    
+                    <h6><u>Current Status</u></h6>
+                    <p>The site is currently not yet under development, i'm still in the planning phase</p>
+                    
+                    <h6><u>Key Features</u></h6>
+                    <p>Not yet aviliable</p>
+                    
+                    <h6><u>Technologies Used</u></h6>
+                    <p>HTML, CSS, JavaScript, Node.js, and whatever else I may need in the future</p>
+                    
+                    <h6><u>Future Plans</u></h6>
+                    <p>Here are some of the future plans for the online store:</p>
+                    <ul>
+                        <li>Make the webstore, having sales connect to my Square account so the money goes straight into my Square card, for business use</li>
+                        <li>Sales will be done using Square API, it will allow for credit/debit sales, even gift cards</li>
+                        <li>I want to connect it to my own inventory management app using my own API, as well as have the API connect my card search app (i will expand on these in their sections below)</li>
+                        <li>Adding a blog section to share news and updates about the store and the hobby/collectibles industry.</li>
+                    </ul>
+                
+                    <h5><u>Inventory Management App</u></h5>
+                    <p>A desktop application to manage inventory efficiently.</p>
+                    <ul>
+                        <li><strong>Overview:</strong> This is my own app and database I made to keep track of my inventory</li>
+                        <li><strong>Key Features:</strong>
+                            <ul>
+                                <li>Stock tracking and alerts</li>
+                                <li>Order management</li>
+                                <li>Reporting and analytics</li>
+                                <li>Barcode scanning</li>
+                            </ul>
+                        </li>
+                        <li><strong>Technologies Used:</strong> Python, PyQT5, SQLite</li>
+                        <li><strong>Future Plans:</strong> Integrating with the online store and API, as well as turn it into a web app with flask so I can run it via a subdomain (inventory.kgamesncollectables.com) so I can have easier access to it from anywhere, and have it save info properly</li>
+                    </ul>
+                
+                    <h5><u>Card Search Application</u></h5>
+                    <p>An application to search and view details about collectible cards.</p>
+                    <ul>
+                        <li><strong>Overview:</strong> My app for searching card prices. its still needs work, cause my webscraping has failed</li>
+                        <li><strong>Key Features:</strong>
+                            <ul>
+                                <li>Search functionality</li>
+                                <li>Detailed card information from different sources such as ebay API, as well as common sites</li>
+                            </ul>
+                        </li>
+                        <li><strong>Future Plans:</strong> Turn it into a web app with flask and run it through a subdomain. Connect it to my API</li>
+                    </ul>
+                
+                    <h5><u>K-Games API</u></h5>
+                    <p>An API to support the various applications under K-Games&Collectables.</p>
+                    <ul>
+                        <li><strong>Overview:</strong> I want to learn to write an API, so I can use this to connect my website to my other apps, like my inventory databases to grab stock and prices, supplier info, and user info and stuff. Makes everything accessable just from my site</li>
+                        <li><strong>Key Features:</strong>
+                            <ul>
+                                <li>Authentication and authorization</li>
+                                <li>Data validation and error handling</li>
+                                <li>Comprehensive documentation</li>
+                            </ul>
+                        </li>
+                        <li><strong>Technologies Used:</strong> Unknown yet</li>
+                        <li><strong>Future Plans:</strong> Learn to write API's, than start writing the API.</li>
+                    </ul>
+                </div>
             </section>
         </main>
     </div>
@@ -237,6 +309,7 @@
     <script src="scripts/accordion.js"></script>
     <script src="scripts/top.js"></script>
     <script src="scripts/tabs.js"></script>
+    <script src="scripts/logo-switch.js"></script>
 </body>
 
 </html>
