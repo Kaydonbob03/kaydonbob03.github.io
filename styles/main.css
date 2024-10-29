@@ -455,3 +455,8 @@ body.dark-mode .tabcontent {
 body.dark-mode .github-logo {
     filter: invert(100%);
 }
+
+#not-found {
+    text-align: center;
+    margin-top: 20px;
+}
