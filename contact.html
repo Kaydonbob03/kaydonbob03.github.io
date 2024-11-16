@@ -14,6 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="body-class">
@@ -63,6 +64,8 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="4" placeholder="Hello, I would like to discuss..." required></textarea>
 
+                    <div class="g-recaptcha" data-sitekey="6Leug0gqAAAAAIOiRmSYc0neb2qpfeyQjYNEzbJc"></div>
+                    <br/>
                     <button type="submit">Send</button>
                 </form>
             </section>
