@@ -502,3 +502,10 @@ body.dark-mode .project-image {
     text-align: center;
     margin-top: 20px;
 }
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+}
