@@ -2,3 +2,7 @@
 /scripts/webhook.js
 /scripts/api-status.js
 api-status.html
+
+
+# ignore other
+photos.html
