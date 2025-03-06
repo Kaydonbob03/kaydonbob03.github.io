@@ -25,3 +25,20 @@ body.dark .project-image {
 .accordion-content.active {
     max-height: 500px;
 }
+
+/* Hamburger menu animation */
+.hamburger-bar {
+    transform-origin: center;
+}
+
+.mobile-menu-open .hamburger-bar:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+}
+
+.mobile-menu-open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-open .hamburger-bar:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
+}

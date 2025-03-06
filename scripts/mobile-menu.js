@@ -4,12 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.classList.toggle('mobile-menu-open');
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
             mobileMenu.classList.add('hidden');
+            mobileMenuButton.classList.remove('mobile-menu-open');
         }
     });
 }); 
