@@ -257,15 +257,15 @@
                         <p class="text-gray-700 dark:text-gray-300">All these projects are a work in progress and will take a long time to finish them all.</p>
                     
                         <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Online Store</u></h5>
-                        <p class="text-gray-700 dark:text-gray-300">An e-commerce platform for selling hobby and collectible items. I own the domain for it (I need to transfer the domain from SquareSpace to my Namecheap account so I can have more DNS access), there is nothing there right now, but the site can be found at <a href="https://kgamesncollectables.com" class="text-accent-light dark:text-accent-dark hover:opacity-80">https://kgamesncollectables.com/</a></p>
+                        <p class="text-gray-700 dark:text-gray-300">An e-commerce platform for selling hobby and collectible items. I own the domain for it. Its just a temporary static site right now, but the site can be found at <a href="https://kgamesncollectables.com" class="text-accent-light dark:text-accent-dark hover:opacity-80">https://kgamesncollectables.com/</a></p>
                         <p class="text-gray-700 dark:text-gray-300">I also do have an email service for my domain through google admin, you can contact me at <a href="mailto:support@kgamesncollectables.com" class="text-accent-light dark:text-accent-dark hover:opacity-80">support@kgamesncollectables.com</a></p>
                         
                         <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>History</u></h5>
-                        <p class="text-gray-700 dark:text-gray-300">The online store was initially launched in 2022 as a platform for me to sell hobby and collectible items. However it was made in squarespace, and I couldn't rationalize spending $50 a month for its hosting, it didn't even include API access to my own site, unless i paid $80/month. I don't have a lot of customers, in fact like none online, my only customers are ebay customers I am trying to move over to my website, but it now doesn't exist. My customers also include people I know irl, either friends/family, or customers I've made via platforms like facebook marketplace, or by talking to people at an actual local games store here in town. Those customers usually just let me know what they want, and I'll invoice them for the items and than purchase the items through the distributors I have access to and than let them know when they can pick up, or I'll deliver to them.</p>
-                        <p class="text-gray-700 dark:text-gray-300">Now, I am hoping to make my own site for this, but the hosting is going to be a problem. I can't afford any server infrastructure right now. Any website I have up right now is run through github pages, this can't be run through there cause I need things like api keys to be private, and I'll need some node.js stuff and other web server stuff not available with github pages</p>
+                        <p class="text-gray-700 dark:text-gray-300">The online store was initially launched in 2022 as a platform for me to sell hobby and collectible items. However it was made in squarespace, and I couldn't rationalize spending $50 a month for its hosting, it didn't even include API access to my own site, unless I paid $80/month. I don't have a lot of customers, in fact like only a few online, my main customers are ebay customers I am trying to move over to my website. My customers also include people I know in real life, either friends/family, or customers I've made via platforms like facebook marketplace, or by talking to people at an actual local games store here in town. Those customers usually just let me know what they want, and I'll invoice them for the items and than purchase the items through the distributors I have access to and than let them know when they can pick up, or I'll deliver/ship to them.</p>
+                        <p class="text-gray-700 dark:text-gray-300">Now, I am hoping to make my own site for this, and i have a server and everything hosting the inventory managememnt app of mine. </p>
                         
                         <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Current Status</u></h5>
-                        <p class="text-gray-700 dark:text-gray-300">The site is currently not yet under development, I'm still in the planning phase</p>
+                        <p class="text-gray-700 dark:text-gray-300">The site is currently up as a static site, takeing advantage of github pages and square's payment links. The development of a full dynamic ecommerce site for myself, is not yet started. I'm still in the planning phase.</p>
                         
                         <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Future Plans</u></h5>
                         <p class="text-gray-700 dark:text-gray-300">Here are some of the future plans for the online store:</p>
@@ -273,7 +273,23 @@
                             <li>Make the webstore, having sales connect to my Square account so the money goes straight into my Square card, for business use</li>
                             <li>Sales will be done using Square API, it will allow for credit/debit sales, even gift cards</li>
                             <li>I want to connect it to my own inventory management app using my own API, as well as have the API connect my card search app</li>
-                            <li>Adding a blog section to share news and updates about the store and the hobby/collectibles industry.</li>
+                            <li>Adding a blog section to share news and updates about the store and the hobby/collectibles industry. [This is implemented on the current temp site, after the dynamic site is made and hosted on my server, the blog will stay on the static site, and i will just have it accessed via subdomain blog.kgamesncollectables.com]</li>
+                        </ul>
+
+                        <h4 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Inventory Management App</u></h4>
+                        <p class="text-gray-700 dark:text-gray-300">The inventory management app is still sorta a work in progress. It is a flask app, being hosted on a server of mine. It allows me to manage inventory of K-Games&collectables.</p>
+                        <p class="text-gray-700 dark:text-gray-300">The app is still a work in progress, but it is fully functional. It allows me to add, edit, and delete items from the inventory, as well as do a slew of other things to assist me in running my small business.</p>
+                        <p class="text-gray-700 dark:text-gray-300">It can be found at <a href="https://inventory.kgamesncollectables.com" class="text-accent-light dark:text-accent-dark hover:opacity-80">https://inventory.kgamesncollectables.com/</a></p>
+
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Currently Implemented</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">Currently, the app is able to add, edit, and delete items from the inventory. It also has a search function, and a way to view all items in the inventory. Completed with a login system, and barcode scanning functionality.</p>
+
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Future Plans</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">Here are some of the future plans for the inventory management app:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Add a way to view sales data, and analytics [this will be good for when I make an api to connect to my online store]</li>
+                            <li>Add a way to manage customers</li>
+                            <li>Add a way to manage orders</li>
                         </ul>
                     </div>
                 </div>
