@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <title>Contact Me</title>
@@ -16,89 +16,155 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="body-class">
+<body class="bg-primary-light dark:bg-primary-dark">
+    <header class="bg-accent-light dark:bg-accent-light shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-900">Contact Me</h1>
+                </div>
+                
+                <!-- Menu buttons -->
+                <div class="flex items-center gap-4">
+                    <button id="mobile-menu-button" class="text-gray-900 hover:text-accent-dark md:hidden">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
 
-    <header class="header-class">
-        <button class="hamburger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <div class="title-div">
-            <h1>Kayden Cormier - Contact Me</h1>
+                <!-- Desktop navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Home</a>
+                    <a href="/portfolio.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">My Portfolio</a>
+                    <a href="/about.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">About Me</a>
+                    <a href="/contact.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-accent-dark">Contact Me</a>
+                    <button id="mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Sun icon -->
+                            <path class="dark:hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <!-- Moon icon -->
+                            <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
         </div>
 
-        <div id="mode-toggle-container">
-            <button id="mode-toggle">
-                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
-            </button>
+        <!-- Mobile navigation menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-accent-light dark:bg-accent-light">
+                <a href="/index.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Home</a>
+                <a href="/portfolio.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">My Portfolio</a>
+                <a href="/about.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">About Me</a>
+                <a href="/contact.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 bg-gray-200 dark:bg-gray-700 rounded-md">Contact Me</a>
+            </div>
         </div>
     </header>
 
-    <nav class="nav-class">
-        <div class="nav-list-div">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">My Portfolio</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="width-wrap">
-        <main class="main-class">
-            <section id="contact-me">
-                <h3>Contact Me</h3>
-                <div class="contact-details">
-                    <p>Email: <a href="mailto:kayden@kaydencormier.dev">kayden@kaydencormier.dev</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/kayden-cormier/" target="_blank">Kayden Cormier</a></p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <main class="space-y-12">
+            <section id="contact-me" class="space-y-8">
+                <div class="text-center space-y-4">
+                    <h3 class="text-4xl font-bold text-gray-900 dark:text-white">Let's Connect!</h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+                        I'm always excited to discuss new opportunities, projects, or just have a friendly chat about technology.
+                    </p>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/xvgpjozg" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Firstname Lastname" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                <div class="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+                    <!-- Contact Info Card -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg space-y-6">
+                        <h4 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Direct Contact</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-6 h-6 text-accent-light dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <a href="mailto:kayden@kaydencormier.dev" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity">
+                                    kayden@kaydencormier.dev
+                                </a>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-6 h-6 text-accent-light dark:text-accent-dark" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                <a href="https://www.linkedin.com/in/kayden-cormier/" target="_blank" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity">
+                                    Kayden Cormier
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Hello, I would like to discuss..." required></textarea>
+                    <!-- Contact Form Card -->
+                    <form class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg space-y-6" action="https://formspree.io/f/xvgpjozg" method="POST">
+                        <h4 class="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Send a Message</h4>
+                        
+                        <div class="space-y-2">
+                            <label for="name" class="block text-gray-700 dark:text-gray-300">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Firstname Lastname" required 
+                                   class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark focus:border-transparent transition-all">
+                        </div>
 
-                    <div class="g-recaptcha" data-sitekey="6Leug0gqAAAAAIOiRmSYc0neb2qpfeyQjYNEzbJc"></div>
-                    <br/>
-                    <button type="submit">Send</button>
-                </form>
+                        <div class="space-y-2">
+                            <label for="email" class="block text-gray-700 dark:text-gray-300">Email</label>
+                            <input type="email" id="email" name="email" placeholder="example@example.com" required 
+                                   class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark focus:border-transparent transition-all">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-gray-700 dark:text-gray-300">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Hello, I would like to discuss..." required 
+                                      class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark focus:border-transparent transition-all"></textarea>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <div class="g-recaptcha" data-sitekey="6Leug0gqAAAAAIOiRmSYc0neb2qpfeyQjYNEzbJc"></div>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-900 py-3 px-6 rounded-lg font-semibold hover:opacity-90 transform hover:scale-[0.98] transition-all duration-200">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </section>
         </main>
     </div>
 
-    <div id="coffee">
-        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+    <div id="coffee" class="fixed bottom-20 left-4 z-50 hover:opacity-90 transition-opacity">
+        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="h-[60px] w-[217px]">
+        </a>
     </div>
 
-    <div> 
-        <button id="back-to-top" title="Back to top">⇡</button>
-    </div>
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-100 p-4 rounded-lg shadow-lg hover:opacity-90 transition-opacity hidden">
+        ⇡
+    </button>
 
-    <footer class="footer-class">
-        <div class="footer-content">
-            <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank">
-                    <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" width="21px" height="21px">
-                </a>
-                <a href="https://github.com/kaydonbob03" target="_blank">
-                    <img src="images/github-mark/github-mark.svg" alt="GitHub" class="github-icon" width="21px" height="21px">
-                </a>
+    <footer class="bg-gray-800 dark:bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <p id="copyright" class="text-gray-100 dark:text-gray-100">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                    <a href="https://github.com/kaydonbob03" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/github-mark/github-mark.svg" alt="GitHub" class="w-6 h-6 github-icon">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/hamburger.js"></script>
     <script src="scripts/darkmode.js"></script>
-    <script src="scripts/accordion.js"></script>
     <script src="scripts/top.js"></script>
+    <script src="scripts/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -1,25 +1,19 @@
-document.getElementById('mode-toggle').addEventListener('click', function() {
-    var body = document.body;
-    var modeIcon = document.getElementById('mode-icon');
-
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        modeIcon.src = "../images/mode.png";
-        localStorage.setItem('darkMode', 'light'); // Store theme in local storage
+document.addEventListener('DOMContentLoaded', function() {
+    const modeToggle = document.getElementById('mode-toggle');
+    
+    // Check for saved user preference, if any
+    const darkMode = localStorage.getItem('darkMode') === 'true';
+    
+    // Set initial mode
+    if (darkMode) {
+        document.documentElement.classList.add('dark');
     } else {
-        body.classList.add('dark-mode');
-        modeIcon.src = "../images/mode1.png";
-        localStorage.setItem('darkMode', 'dark'); // Store theme in local storage
+        document.documentElement.classList.remove('dark');
     }
+    
+    // Add click event to toggle button
+    modeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('darkMode', isDark);
+    });
 });
-
-// Check for saved 'darkMode' in localStorage, else set it based on system preference
-let darkMode = localStorage.getItem('darkMode') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-
-if (darkMode === "dark") {
-    document.body.classList.add('dark-mode');
-    document.getElementById('mode-icon').src = '../images/mode1.png';
-} else {
-    document.body.classList.remove('dark-mode');
-    document.getElementById('mode-icon').src = '../images/mode.png';
-}

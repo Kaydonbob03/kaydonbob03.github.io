@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <title>404 Page Not Found - Kayden Cormier</title>
@@ -15,83 +15,103 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="body-class">
+<body class="bg-primary-light dark:bg-primary-dark">
+    <header class="bg-accent-light dark:bg-accent-light shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-900">404 - Page Not Found</h1>
+                </div>
+                
+                <!-- Menu buttons -->
+                <div class="flex items-center gap-4">
+                    <button id="mobile-menu-button" class="text-gray-900 hover:text-accent-dark md:hidden">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
 
-    <header class="header-class">
-        <button class="hamburger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <div class="title-div">
-            <h1>404 - Page Not Found</h1>
+                <!-- Desktop navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Home</a>
+                    <a href="/portfolio.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">My Portfolio</a>
+                    <a href="/about.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">About Me</a>
+                    <a href="/contact.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Contact Me</a>
+                    <button id="mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Sun icon -->
+                            <path class="dark:hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <!-- Moon icon -->
+                            <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
         </div>
 
-        <div id="mode-toggle-container">
-            <button id="mode-toggle">
-                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
-            </button>
+        <!-- Mobile navigation menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-accent-light dark:bg-accent-light">
+                <a href="/index.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Home</a>
+                <a href="/portfolio.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">My Portfolio</a>
+                <a href="/about.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">About Me</a>
+                <a href="/contact.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Contact Me</a>
+            </div>
         </div>
     </header>
 
-    <nav class="nav-class">
-        <div class="nav-list-div">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">My Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="width-wrap">
-        <main class="main-class">
-            <section id="not-found">
-                <h3>Oh Nooooooooo! That page could not be found</h3>
-                <p>Sorry, but the page you were looking for does not seem to exist here. Perhaps you made a typo? Or are you a time traveller from the future, where that page exists on this site?</p>
-                <p>Whatever the reason is, the links below may help you find your way! :) </p>
-                <br/>
-                    <a href="index.html">Home</a>
-                    <p></p>
-                    <a href="portfolio.html">My Portfolio</a>
-                    <p></p>
-                    <a href="contact.html">Contact Me</a>
-                    <p></p>
-                    <a href="about.html">About Me</a>
+    <div class="min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col">
+        <main class="space-y-8 flex-grow">
+            <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                <h3 class="text-3xl font-bold text-gray-900 dark:text-white text-center">Oh Nooooooooo! That page could not be found</h3>
+                <p class="text-lg text-gray-700 dark:text-gray-300 text-center">Sorry, but the page you were looking for does not seem to exist here. Perhaps you made a typo? Or are you a time traveller from the future, where that page exists on this site?</p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 text-center">Whatever the reason is, the links below may help you find your way! :)</p>
+                
+                <div class="flex flex-col items-center space-y-4">
+                    <a href="index.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">Home</a>
+                    <a href="portfolio.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">My Portfolio</a>
+                    <a href="about.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">About Me</a>
+                    <a href="contact.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">Contact Me</a>
+                </div>
             </section>
         </main>
     </div>
 
-    <div id="coffee">
-        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;"></a>
+    <div id="coffee" class="fixed bottom-20 left-4 z-50 hover:opacity-90 transition-opacity">
+        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="h-[60px] w-[217px]">
+        </a>
     </div>
 
-    <div> 
-        <button id="back-to-top" title="Back to top">⇡</button>
-    </div>
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-100 p-4 rounded-lg shadow-lg hover:opacity-90 transition-opacity hidden">
+        ⇡
+    </button>
 
-    <footer class="footer-class">
-        <div class="footer-content">
-            <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank">
-                    <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" width="21px" height="21px">
-                </a>
-                <a href="https://github.com/kaydonbob03" target="_blank">
-                    <img src="images/github-mark/github-mark.svg" alt="GitHub" class="github-icon" width="21px" height="21px">
-                </a>
+    <footer class="bg-gray-800 dark:bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <p id="copyright" class="text-gray-100 dark:text-gray-100">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                    <a href="https://github.com/kaydonbob03" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/github-mark/github-mark.svg" alt="GitHub" class="w-6 h-6 github-icon">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/hamburger.js"></script>
     <script src="scripts/darkmode.js"></script>
-    <script src="scripts/accordion.js"></script>
     <script src="scripts/top.js"></script>
-    <script src="scripts/tabs.js"></script>
+    <script src="scripts/mobile-menu.js"></script>
 </body>
 
 </html>

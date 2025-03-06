@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <title>My Portfolio</title>
@@ -15,308 +15,303 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="body-class">
+<body class="bg-primary-light dark:bg-primary-dark">
+    <header class="bg-accent-light dark:bg-accent-light shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-900">My Portfolio</h1>
+                </div>
+                
+                <!-- Menu buttons -->
+                <div class="flex items-center gap-4">
+                    <button id="mobile-menu-button" class="text-gray-900 hover:text-accent-dark md:hidden">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
 
-    <header class="header-class">
-        <button class="hamburger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <div class="title-div">
-            <h1>Kayden Cormier - My Portfolio</h1>
+                <!-- Desktop navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Home</a>
+                    <a href="/portfolio.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-accent-dark">My Portfolio</a>
+                    <a href="/about.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">About Me</a>
+                    <a href="/contact.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Contact Me</a>
+                    <button id="mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Sun icon -->
+                            <path class="dark:hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <!-- Moon icon -->
+                            <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
         </div>
 
-        <div id="mode-toggle-container">
-            <button id="mode-toggle">
-                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
-            </button>
+        <!-- Mobile navigation menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-accent-light dark:bg-accent-light">
+                <a href="/index.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Home</a>
+                <a href="/portfolio.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 bg-gray-200 dark:bg-gray-700 rounded-md">My Portfolio</a>
+                <a href="/about.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">About Me</a>
+                <a href="/contact.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Contact Me</a>
+            </div>
         </div>
     </header>
 
-    <nav class="nav-class">
-        <div class="nav-list-div">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">My Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="width-wrap">
-        <main class="main-class">
-            <section id="portfolio">
-                <h3>My Portfolio</h3>
-                <div class="tab">
-                    <button class="tablinks" onclick="openProject(event, 'Project1')">My Projects</button>
-                    <button class="tablinks" onclick="openProject(event, 'Project2')">Personal Webpage</button>
-                    <button class="tablinks" onclick="openProject(event, 'Project3')">Discord Bot</button>
-                    <button class="tablinks" onclick="openProject(event, 'Project4')">GPT Work</button>
-                    <button class="tablinks" onclick="openProject(event, 'Project5')">K-Games&Collectables</button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main class="space-y-8">
+            <section id="portfolio" class="space-y-6">
+                <h3 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">My Portfolio</h3>
+                
+                <!-- Tab Navigation -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project1')">My Projects</button>
+                    <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project2')">Personal Webpage</button>
+                    <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project3')">Discord Bot</button>
+                    <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project4')">GPT Work</button>
+                    <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project5')">K-Games&Collectables</button>
                 </div>
 
-                <div id="Project1" class="tabcontent">
-                    <h4>My Projects</h4>
-                    <p>On this page you will find information about all of the side projects and things ive done as a programmer</p> 
-                    <p>You can navigate the tabs above to see information on each project. Under every project will be a github link to the repo</p>
-                    <br/>
-                    <p>Below is a quick list of my projects:</p> 
-                    <ul>
-                        <li>Personal Webpage -- The website you are currently on. Made to showcase everything ive programmed and pose as my programmers CV</li>
-                        <li>Discord Bot -- kaydonbot is all all-purpose discord bot</li>
-                        <li>Website for Discord Bot -- A website for documentation and information on my discord bot</li>
-                        <li>K-Games&Collectables -- My little collectibles/hobby store & associated apps ive made</li>
-                        <li>GPT Work -- The first bigger project ive done after getting into college and remembering my love for programming, is a few small programs I wrote using OpenAi's API</li>
-                    </ul>
+                <!-- Project 1 Content -->
+                <div id="Project1" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">My Projects</h4>
+                    <div class="prose dark:prose-invert max-w-none">
+                        <p class="text-gray-700 dark:text-gray-300">On this page you will find information about all of the side projects and things I've done as a programmer.</p>
+                        <p class="text-gray-700 dark:text-gray-300">You can navigate the tabs above to see information on each project. Under every project will be a GitHub link to the repo.</p>
+                        
+                        <p class="text-gray-900 dark:text-white font-semibold mt-6">Below is a quick list of my projects:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Personal Webpage -- The website you are currently on. Made to showcase everything I've programmed and pose as my programmer's CV</li>
+                            <li>Discord Bot -- kaydonbot is an all-purpose discord bot</li>
+                            <li>Website for Discord Bot -- A website for documentation and information on my discord bot</li>
+                            <li>K-Games&Collectables -- My little collectibles/hobby store & associated apps I've made</li>
+                            <li>GPT Work -- The first bigger project I've done after getting into college and remembering my love for programming, is a few small programs I wrote using OpenAI's API</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div id="Project2" class="tabcontent">
-                    <h4>Personal Webpage</h4>
+                <!-- Project 2 Content -->
+                <div id="Project2" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">Personal Webpage</h4>
+                    <div class="prose dark:prose-invert max-w-none">
+                        <p class="text-gray-700 dark:text-gray-300">The website you are currently on.</p>
+                        <p class="text-gray-700 dark:text-gray-300">I've been coding with HTML and CSS since grade 9. My grade 9 computer science class was where I first discovered my passion for programming.</p>
 
-                    <p>The website you are currently on</p> 
-                    <p>I've been coding with html and css since grade 9. My grade 9 computer science class was where I first discovered my passion for programming</p> 
-                    <p></p>
-                    <p id="split">~ ~ ~</p>
-                    <p></p>
-                    <p>I made this website becuase after I wrote a cover letter to apply for a junior web developer postion, I realized, Instead of writing everything i've ever programmed and such, I may as well make a portfolio website to be able to show potential employers and the like</p>
-                    <p>So here we are, my personal webpage. It's still a work in progress, but im proud of how its turning out</p>
-                    <p>Enjoy :)</p>
-                    <p></p>
-                    <p>You can find the Git repo for this website <a href="https://github.com/kaydonbob03/kaydonbob03.github.io/">here</a></p>
+                        <div class="my-6 text-center">
+                            <p class="text-gray-500 dark:text-gray-400">~ ~ ~</p>
+                        </div>
 
-                    <p id="split">~ ~ ~</p>
+                        <p class="text-gray-700 dark:text-gray-300">I made this website because after I wrote a cover letter to apply for a junior web developer position, I realized, instead of writing everything I've ever programmed and such, I may as well make a portfolio website to be able to show potential employers and the like.</p>
+                        <p class="text-gray-700 dark:text-gray-300">So here we are, my personal webpage. It's still a work in progress, but I'm proud of how it's turning out.</p>
+                        <p class="text-gray-700 dark:text-gray-300">Enjoy :)</p>
 
-                    <h5><u>Technologies Used</u></h5>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>GitHub Pages</li>
-                    </ul>
+                        <p class="text-gray-700 dark:text-gray-300">You can find the Git repo for this website <a href="https://github.com/kaydonbob03/kaydonbob03.github.io/" class="text-accent-light dark:text-accent-dark hover:opacity-80">here</a></p>
 
-                    <h5><u>Key Features</u></h5>
-                    <ul>
-                        <li>Responsive design</li>
-                        <li>Dark mode toggle</li>
-                        <li>Interactive elements</li>
-                        <li>Project showcase</li>
-                    </ul>
+                        <div class="my-6 text-center">
+                            <p class="text-gray-500 dark:text-gray-400">~ ~ ~</p>
+                        </div>
 
-                    <h5><u>Future Plans</u></h5>
-                    <ul>
-                        <li>Add more projects</li>
-                        <li>Actually add my biography to about.html</li>
-                        <li>Implement a blog section</li>
-                    </ul>
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Technologies Used</u></h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>GitHub Pages</li>
+                        </ul>
 
-                    <h5><u>Contact Information</u></h5>
-                    <p>If you have any questions or would like to get in touch, please contact me at <a href="mailto:kayden@kaydencormier.dev">kayden@kaydencormier.dev</a>.</p>
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Key Features</u></h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Responsive design</li>
+                            <li>Dark mode toggle</li>
+                            <li>Interactive elements</li>
+                            <li>Project showcase</li>
+                        </ul>
+
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Future Plans</u></h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Add more projects</li>
+                            <li>Actually add my biography to about.html</li>
+                            <li>Implement a blog section</li>
+                        </ul>
+
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Contact Information</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">If you have any questions or would like to get in touch, please contact me at <a href="mailto:kayden@kaydencormier.dev" class="text-accent-light dark:text-accent-dark hover:opacity-80">kayden@kaydencormier.dev</a>.</p>
+                    </div>
                 </div>
 
-                <div id="Project3" class="tabcontent">
-                    <h4>Discord Bot</h4>
-                    
-                    <p>The bot, named "Kaydonbot" is an all-purpose discord bot to help with tasks in a discord server.</p>
-                    <p>The bot has moderation commands, dev commands, general commands, as well as some fun little botgames.</p>
-                    <p>I have also made a website for documentation for the discord bot, it can be found <a href="https://kaydonbot.xyz/">here</a>.</p>
-                    <p>On the site (kaydonbot.xyz) you can find a full list of all the commands, as well as an FAQ. I have plans to add a contact form to the site.</p>
-                    <p>The link to the repo for the site can be found <a href="https://github.com/kaydonbot/kaydonbot.github.io">here</a>.</p>
-                    <p>Below is a link to the GitHub repo for the discord bot:</p>
-                    
-                    <a href="https://kaydonbot.xyz/sourcecode" target="_blank">
-                        <img class="github-logo" src="images/GitHub-Logos/GitHub_Logo.png" alt="GitHub Logo" width="100px">
-                    </a>
-                    
-                    <p id="split">~ ~ ~</p>
+                <!-- Project 3 Content -->
+                <div id="Project3" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">Discord Bot</h4>
+                    <div class="prose dark:prose-invert max-w-none">
+                        <p class="text-gray-700 dark:text-gray-300">The bot, named "Kaydonbot" is an all-purpose discord bot to help with tasks in a discord server.</p>
+                        <p class="text-gray-700 dark:text-gray-300">The bot has moderation commands, dev commands, general commands, as well as some fun little botgames.</p>
+                        <p class="text-gray-700 dark:text-gray-300">I have also made a website for documentation for the discord bot, it can be found <a href="https://kaydonbot.xyz/" class="text-accent-light dark:text-accent-dark hover:opacity-80">here</a>.</p>
+                        <p class="text-gray-700 dark:text-gray-300">On the site (kaydonbot.xyz) you can find a full list of all the commands, as well as an FAQ. I have plans to add a contact form to the site.</p>
+                        <p class="text-gray-700 dark:text-gray-300">The link to the repo for the site can be found <a href="https://github.com/kaydonbot/kaydonbot.github.io" class="text-accent-light dark:text-accent-dark hover:opacity-80">here</a>.</p>
+                        <p class="text-gray-700 dark:text-gray-300">Below is a link to the GitHub repo for the discord bot:</p>
+                        
+                        <div class="flex justify-center my-6">
+                            <a href="https://kaydonbot.xyz/sourcecode" target="_blank" class="hover:opacity-80 transition-opacity">
+                                <img class="github-logo dark:hidden" src="images/GitHub-Logos/GitHub_Logo.png" alt="GitHub Logo" width="100">
+                                <img class="github-logo hidden dark:block" src="images/GitHub-Logos/GitHub_Logo_White.png" alt="GitHub Logo" width="100">
+                            </a>
+                        </div>
+                        
+                        <div class="my-6 text-center">
+                            <p class="text-gray-500 dark:text-gray-400">~ ~ ~</p>
+                        </div>
 
-                    <h5><u>Key Features</u></h5>
-                    <ul>
-                        <li>Moderation commands</li>
-                        <li>Developer commands</li>
-                        <li>General commands</li>
-                        <li>Fun bot games</li>
-                    </ul>
-                
-                    <h5><u>Installation Instructions</u></h5>
-                    <p>To install the bot, follow these steps:</p>
-                    <ol>
-                        <li>Clone the repository: <code>git clone https://github.com/kaydonbob03/kaydonbot.git</code></li>
-                        <p></p>
-                        <li>Navigate to the project directory: <code>cd kaydonbot</code></li>
-                        <p></p>
-                        <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
-                        <p></p>
-                        <li>Run the bot: <code>python kaydonbotv2.py</code></li>
-                    </ol>
-                
-                    <h5><u>Screenshots</u></h5>
-                    <p>Here are some screenshots of the bot in action:</p>
-                    <img src="https://picsum.photos/300/300" alt="Screenshot 1" width="300px">
-                    <img src="https://picsum.photos/301/301" alt="Screenshot 2" width="300px">
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Key Features</u></h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Moderation commands</li>
+                            <li>Developer commands</li>
+                            <li>General commands</li>
+                            <li>Fun bot games</li>
+                        </ul>
+                    
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Installation Instructions</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">To install the bot, follow these steps:</p>
+                        <ol class="list-decimal list-inside space-y-4 text-gray-700 dark:text-gray-300">
+                            <li>Clone the repository: <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">git clone https://github.com/kaydonbob03/kaydonbot.git</code></li>
+                            <li>Navigate to the project directory: <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">cd kaydonbot</code></li>
+                            <li>Install dependencies: <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">pip install -r requirements.txt</code></li>
+                            <li>Run the bot: <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">python kaydonbotv2.py</code></li>
+                        </ol>
+                    
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Screenshots</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">Here are some screenshots of the bot in action:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <img src="images/kaydonbot-img.png" alt="Kaydonbot command /botinfo" class="rounded-lg shadow-md">
+                            <img src="images/kaydonbot-img2.png" alt="Kaydonbot command /commands pg 3" class="rounded-lg shadow-md">
+                        </div>
+                    </div>
                 </div>
 
-                 <div id="Project4" class="tabcontent">
-                    <h4>GPT Work</h4>
-                    
-                    <p>GPT Work is my repository working with OpenAI's API. It needs to be updated to the latest endpoints and models, but it is still cool.</p>
-                    <p>This project showcases various capabilities of AI-driven interactions using the GPT API and other related technologies.</p>
-                    
-                    <p id="split">~ ~ ~</p>
+                <!-- Project 4 Content -->
+                <div id="Project4" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">GPT Work</h4>
+                    <div class="prose dark:prose-invert max-w-none">
+                        <p class="text-gray-700 dark:text-gray-300">GPT Work is my repository working with OpenAI's API. It needs to be updated to the latest endpoints and models, but it is still cool.</p>
+                        <p class="text-gray-700 dark:text-gray-300">This project showcases various capabilities of AI-driven interactions using the GPT API and other related technologies.</p>
+                        
+                        <div class="my-6 text-center">
+                            <p class="text-gray-500 dark:text-gray-400">~ ~ ~</p>
+                        </div>
 
-                    <h5><u>Overview</u></h5>
-                    <p>Welcome to <strong>GPT-Work</strong>, a collection of Python scripts that interface with the GPT API and other related technologies. These tools are designed to showcase the capabilities of AI-driven interactions in various forms.</p>
-                    
-                    <h5><u>Author</u></h5>
-                    <p>Developed by Kayden Cormier (Kaydonbob03).</p>
-                    
-                    <h5><u>Copyright</u></h5>
-                    <p>This repository is for personal use and educational purposes. Users are permitted to access, use, and modify the code. <strong>Redistribution or commercial use is prohibited.</strong></p>
-                    
-                    <h5><u>Getting Started</u></h5>
-                    <p>To utilize these scripts, an OpenAI API key is essential. Obtain one from <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API Keys</a>.</p>
-                    <p>For specific functionalities like speech-to-text and text-to-speech, additional keys are required:</p>
-                    <ul>
-                        <li><strong>Azure Key</strong>: Create one at the <a href="https://portal.azure.com/#home" target="_blank">Azure Portal</a> under speech services.</li>
-                        <li><strong>Google Cloud Services Credentials</strong>: Available at <a href="https://console.cloud.google.com/apis/credentials" target="_blank">Google Cloud Credentials</a>.</li>
-                    </ul>
-                    
-                    <h5><u>Included Files</u></h5>
-                    <ul>
-                        <li><strong>Changelog.md</strong>: Documents the updates and changes made to the scripts in this repository.</li>
-                        <li><strong>GPTvoice.py</strong>: Transcribes user input from a microphone using Google Cloud, processes it through GPT-4, and then outputs spoken responses via Azure Text-To-Speech.</li>
-                        <li><strong>InputtoResponse.py</strong>: Offers two modes: standard GPT chat and GPT chat with a fixed prompt. Toggle between them by commenting out the desired section.</li>
-                        <li><strong>Imagegeneration.py</strong>: Generates images based on user input using OpenAI's Dall-E-3.</li>
-                        <li><strong>inputtovoice.py</strong>: Similar to GPTvoice.py, but takes text input instead of audio.</li>
-                        <li><strong>GPTVoicewithGUI.py</strong>: An interactive GUI application that mirrors the functionality of GPTvoice.py but allows users to edit the fixed prompt and start recording with a button click. Currently in the testing phase.</li>
-                    </ul>
-                    
-                    <p>Below is a link to the GitHub repo</p>
-                    <a href="https://github.com/kaydonbob03/GPT-Work" target="_blank">
-                        <img class="github-logo" src="images/GitHub-Logos/GitHub_Logo.png" alt="GitHub Logo" width="100px">
-                    </a>
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white"><u>Overview</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">Welcome to <strong>GPT-Work</strong>, a collection of Python scripts that interface with the GPT API and other related technologies. These tools are designed to showcase the capabilities of AI-driven interactions in various forms.</p>
+                        
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Author</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">Developed by Kayden Cormier (Kaydonbob03).</p>
+                        
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Copyright</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">This repository is for personal use and educational purposes. Users are permitted to access, use, and modify the code. <strong>Redistribution or commercial use is prohibited.</strong></p>
+                        
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Getting Started</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">To utilize these scripts, an OpenAI API key is essential. Obtain one from <a href="https://platform.openai.com/account/api-keys" target="_blank" class="text-accent-light dark:text-accent-dark hover:opacity-80">OpenAI API Keys</a>.</p>
+                        <p class="text-gray-700 dark:text-gray-300">For specific functionalities like speech-to-text and text-to-speech, additional keys are required:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li><strong>Azure Key:</strong> Create one at the <a href="https://portal.azure.com/#home" target="_blank" class="text-accent-light dark:text-accent-dark hover:opacity-80">Azure Portal</a> under speech services.</li>
+                            <li><strong>Google Cloud Services Credentials:</strong> Available at <a href="https://console.cloud.google.com/apis/credentials" target="_blank" class="text-accent-light dark:text-accent-dark hover:opacity-80">Google Cloud Credentials</a>.</li>
+                        </ul>
+                        
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Included Files</u></h5>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li><strong>Changelog.md:</strong> Documents the updates and changes made to the scripts in this repository.</li>
+                            <li><strong>GPTvoice.py:</strong> Transcribes user input from a microphone using Google Cloud, processes it through GPT-4, and then outputs spoken responses via Azure Text-To-Speech.</li>
+                            <li><strong>InputtoResponse.py:</strong> Offers two modes: standard GPT chat and GPT chat with a fixed prompt.</li>
+                            <li><strong>Imagegeneration.py:</strong> Generates images based on user input using OpenAI's Dall-E-3.</li>
+                            <li><strong>inputtovoice.py:</strong> Similar to GPTvoice.py, but takes text input instead of audio.</li>
+                            <li><strong>GPTVoicewithGUI.py:</strong> An interactive GUI application that mirrors the functionality of GPTvoice.py but allows users to edit the fixed prompt and start recording with a button click.</li>
+                        </ul>
+                        
+                        <div class="flex justify-center my-6">
+                            <a href="https://github.com/kaydonbob03/GPT-Work" target="_blank" class="hover:opacity-80 transition-opacity">
+                                <img class="github-logo dark:hidden" src="images/GitHub-Logos/GitHub_Logo.png" alt="GitHub Logo" width="100">
+                                <img class="github-logo hidden dark:block" src="images/GitHub-Logos/GitHub_Logo_White.png" alt="GitHub Logo" width="100">
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="Project5" class="tabcontent">
-                    <h4>K-Games&Collectables</h4>
-                        <img src="images/logo_light_mode.png" alt="K-Games&Collectables logo(if you see this its a bug, try toggle light/dark mode :P)" class="project-image" width="200px" height="200px"/>
+                <!-- Project 5 Content -->
+                <div id="Project5" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">K-Games&Collectables</h4>
+                    <div class="prose dark:prose-invert max-w-none">
+                        <div class="flex justify-center mb-6">
+                            <img src="images/logo_light_mode.png" alt="K-Games&Collectables logo" class="w-48 h-48 object-contain dark:hidden"/>
+                            <img src="images/logo_dark_mode.png" alt="K-Games&Collectables logo" class="w-48 h-48 object-contain hidden dark:block"/>
+                        </div>
+                        
+                        <p class="text-gray-700 dark:text-gray-300">This one is a bit tricky. This is my hobby/collectibles small business.</p> 
+                        <p class="text-gray-700 dark:text-gray-300">This project includes a bunch of sub-projects of mine.</p> 
+                        <p class="text-gray-700 dark:text-gray-300">These projects range from an online store, an inventory management app, a card search application, to a whole API I want to make.</p>
+                        <p class="text-gray-700 dark:text-gray-300">All these projects are a work in progress and will take a long time to finish them all.</p>
                     
-                    <p>This one is a bit tricky. This is my hobby/collectibles small business.</p> 
-                    <p>This project includes a bunch of sub-projects of mine.</p> 
-                    <p>These projects range from an online store, an inventory management app, a card search application, to a whole API I want to make.</p>
-                    <p>All these projects are a work in progress and will take a long time to finish them all.</p>
-                
-                    <h3><u>Online Store</u></h3>
-                    <p>An e-commerce platform for selling hobby and collectible items. I own the domain for it (I need to transfer the domain from SquareSpace to my Namecheap account so I can have more DNS access), there is nothing there right now, but the site can be found at <a href="https://kgamesncollectables.com">https://kgamesncollectables.com/</a></p>
-                    <p>I also do have an email service for my domain through google admin, you can contact me at <a href="mailto:support@kgamesncollectables.com">support@kgamesncollectables.com</a></p>
-                    
-                    <h5><u>History</u></h5>
-                    <p>The online store was initially launched in 2022 as a platform for me to sell hobby and collectible items. However it was made in squarespace, and I couldnt rationalize spending $50 a month for its hosting, it didnt even include API access to my own site, unless i paid $80/month. I dont have a lot of customers, in fact like none online, my only customers are ebay customers I am trying to move over to my website, but it now doesnt exist. My customers also include people I know irl, either friends/family, or custoemrs ive made via platforms like facebook marketplace, or by talking to people at an actual local games store here in town. Those customers usually just let me know what they want, and i'll invoice them for the items and than purchase the items through the distributors i have access to and than let them know when they can pick up, or ill deliver to them.</p>
-                    <p>Now, I am hoping to make my own site for this, but the hosting is going to be a problem. I cant afford any server infrastructure right now. Any website i have up right now is run through github pages, this can't be run through there cause i need things like api keys to be private, and i'll need some node.js stuff and other web server stuff not aviliable with github pages</p>
-                    
-                    <h5><u>Current Status</u></h5>
-                    <p>The site is currently not yet under development, i'm still in the planning phase</p>
-                    
-                    <h5><u>Key Features</u></h5>
-                    <p>Not yet aviliable</p>
-                    
-                    <h5><u>Technologies Used</u></h5>
-                    <p>HTML, CSS, JavaScript, Node.js, and whatever else I may need in the future</p>
-                    
-                    <h5><u>Future Plans</u></h5>
-                    <p>Here are some of the future plans for the online store:</p>
-                    <ul>
-                        <li>Make the webstore, having sales connect to my Square account so the money goes straight into my Square card, for business use</li>
-                        <li>Sales will be done using Square API, it will allow for credit/debit sales, even gift cards</li>
-                        <li>I want to connect it to my own inventory management app using my own API, as well as have the API connect my card search app (i will expand on these in their sections below)</li>
-                        <li>Adding a blog section to share news and updates about the store and the hobby/collectibles industry.</li>
-                    </ul>
-                
-                    <p id="split">~ ~ ~</p>
-
-                    <h3><u>Inventory Management App</u></h3>
-                    <p>A desktop application to manage inventory efficiently.</p>
-                    <ul>
-                        <li><strong>Overview:</strong> This is my own app and database I made to keep track of my inventory</li>
-                        <li><strong>Key Features:</strong>
-                            <ul>
-                                <li>Stock tracking and alerts</li>
-                                <li>Order management</li>
-                                <li>Reporting and analytics</li>
-                                <li>Barcode scanning</li>
-                            </ul>
-                        </li>
-                        <li><strong>Technologies Used:</strong> Python, PyQT5, SQLite</li>
-                        <li><strong>Future Plans:</strong> Integrating with the online store and API, as well as turn it into a web app with flask or django so I can run it via a subdomain (inventory.kgamesncollectables.com) so I can have easier access to it from anywhere, and have it save info properly</li>
-                    </ul>
-                
-                    <p id="split">~ ~ ~</p>
-
-                    <h3><u>Card Search Application</u></h3>
-                    <p>An application to search and view details about collectible cards.</p>
-                    <ul>
-                        <li><strong>Overview:</strong> My app for searching card prices. its still needs work, cause my webscraping has failed</li>
-                        <li><strong>Key Features:</strong>
-                            <ul>
-                                <li>Search functionality</li>
-                                <li>Detailed card information from different sources such as ebay API, as well as common sites</li>
-                            </ul>
-                        </li>
-                        <li><strong>Future Plans:</strong> Turn it into a web app with flask and run it through a subdomain. Connect it to my API</li>
-                    </ul>
-                
-                    <p id="split">~ ~ ~</p>
-
-                    <h3><u>K-Games API</u></h3>
-                    <p>An API to support the various applications under K-Games&Collectables.</p>
-                    <ul>
-                        <li><strong>Overview:</strong> I want to learn to write an API, so I can use this to connect my website to my other apps, like my inventory databases to grab stock and prices, supplier info, and user info and stuff. Makes everything accessable just from my site</li>
-                        <li><strong>Key Features:</strong>
-                            <ul>
-                                <li>Authentication and authorization</li>
-                                <li>Data validation and error handling</li>
-                                <li>Comprehensive documentation</li>
-                            </ul>
-                        </li>
-                        <li><strong>Technologies Used:</strong> Unknown yet</li>
-                        <li><strong>Future Plans:</strong> Learn to write API's, than start writing the API.</li>
-                    </ul>
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Online Store</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">An e-commerce platform for selling hobby and collectible items. I own the domain for it (I need to transfer the domain from SquareSpace to my Namecheap account so I can have more DNS access), there is nothing there right now, but the site can be found at <a href="https://kgamesncollectables.com" class="text-accent-light dark:text-accent-dark hover:opacity-80">https://kgamesncollectables.com/</a></p>
+                        <p class="text-gray-700 dark:text-gray-300">I also do have an email service for my domain through google admin, you can contact me at <a href="mailto:support@kgamesncollectables.com" class="text-accent-light dark:text-accent-dark hover:opacity-80">support@kgamesncollectables.com</a></p>
+                        
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>History</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">The online store was initially launched in 2022 as a platform for me to sell hobby and collectible items. However it was made in squarespace, and I couldn't rationalize spending $50 a month for its hosting, it didn't even include API access to my own site, unless i paid $80/month. I don't have a lot of customers, in fact like none online, my only customers are ebay customers I am trying to move over to my website, but it now doesn't exist. My customers also include people I know irl, either friends/family, or customers I've made via platforms like facebook marketplace, or by talking to people at an actual local games store here in town. Those customers usually just let me know what they want, and I'll invoice them for the items and than purchase the items through the distributors I have access to and than let them know when they can pick up, or I'll deliver to them.</p>
+                        <p class="text-gray-700 dark:text-gray-300">Now, I am hoping to make my own site for this, but the hosting is going to be a problem. I can't afford any server infrastructure right now. Any website I have up right now is run through github pages, this can't be run through there cause I need things like api keys to be private, and I'll need some node.js stuff and other web server stuff not available with github pages</p>
+                        
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Current Status</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">The site is currently not yet under development, I'm still in the planning phase</p>
+                        
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Future Plans</u></h5>
+                        <p class="text-gray-700 dark:text-gray-300">Here are some of the future plans for the online store:</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Make the webstore, having sales connect to my Square account so the money goes straight into my Square card, for business use</li>
+                            <li>Sales will be done using Square API, it will allow for credit/debit sales, even gift cards</li>
+                            <li>I want to connect it to my own inventory management app using my own API, as well as have the API connect my card search app</li>
+                            <li>Adding a blog section to share news and updates about the store and the hobby/collectibles industry.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
 
-    <div id="coffee">
-        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;"></a>
+    <div id="coffee" class="fixed bottom-20 left-4 z-50 hover:opacity-90 transition-opacity">
+        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="h-[60px] w-[217px]">
+        </a>
     </div>
 
-    <div> 
-        <button id="back-to-top" title="Back to top">⇡</button>
-    </div>
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-100 p-4 rounded-lg shadow-lg hover:opacity-90 transition-opacity hidden">
+        ⇡
+    </button>
 
-    <footer class="footer-class">
-        <div class="footer-content">
-            <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank">
-                    <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" width="21px" height="21px">
-                </a>
-                <a href="https://github.com/kaydonbob03" target="_blank">
-                    <img src="images/github-mark/github-mark.svg" alt="GitHub" class="github-icon" width="21px" height="21px">
-                </a>
+    <footer class="bg-gray-800 dark:bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <p id="copyright" class="text-gray-100 dark:text-gray-100">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                    <a href="https://github.com/kaydonbob03" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/github-mark/github-mark.svg" alt="GitHub" class="w-6 h-6 github-icon">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/hamburger.js"></script>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/accordion.js"></script>
     <script src="scripts/top.js"></script>
     <script src="scripts/tabs.js"></script>
-    <script src="scripts/logo-switch.js"></script>
+    <script src="scripts/mobile-menu.js"></script>
 </body>
 
 </html>

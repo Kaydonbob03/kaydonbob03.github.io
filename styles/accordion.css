@@ -8,11 +8,14 @@
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+    transition: all 0.3s ease-out;
 }
 
 .accordion-content.active {
-    max-height: 500px; /* Adjust this value based on your content */
+    max-height: 1000px; /* Increased to accommodate more content */
+    opacity: 1;
 }
 
 .accordion-item {
@@ -25,14 +28,14 @@ body.dark-mode .accordion-item {
     border-bottom: 1px solid var(--text-color-dark);
 }
 
-.accordion-header::after {
-    content: "+";
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+.accordion-header span {
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
 }
 
-.accordion-header.active::after {
-    content: "-";
+.accordion-header.active span {
+    transform: rotate(45deg);
 }

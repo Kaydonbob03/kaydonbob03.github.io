@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <title>Home - Kayden Cormier</title>
@@ -10,125 +10,132 @@
     <meta name="author" content="Kayden Cormier" />
     <meta description="Personal Website and Developer Portfolio for Kayden Cormier"/>
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/accordion.css" />
-    <link rel="Normalize" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="body-class">
+<body class="bg-primary-light dark:bg-primary-dark">
+    <header class="bg-accent-light dark:bg-accent-light shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-900">Home</h1>
+                </div>
 
-    <header class="header-class">
-        <button class="hamburger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <div class="title-div">
-            <h1>Kayden Cormier - Developer Portfolio</h1>
+                <!-- Menu buttons -->
+                <div class="flex items-center gap-4">
+                    <button id="mobile-menu-button" class="text-gray-900 hover:text-accent-dark md:hidden">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-accent-dark">Home</a>
+                    <a href="/portfolio.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">My Portfolio</a>
+                    <a href="/about.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">About Me</a>
+                    <a href="/contact.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Contact Me</a>
+                    <button id="mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Sun icon -->
+                            <path class="dark:hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <!-- Moon icon -->
+                            <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
         </div>
 
-        <div id="mode-toggle-container">
-            <button id="mode-toggle">
-                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
-            </button>
+        <!-- Mobile navigation menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-accent-light dark:bg-accent-light">
+                <a href="/index.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 bg-gray-200 dark:bg-gray-700 rounded-md">Home</a>
+                <a href="/portfolio.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">My Portfolio</a>
+                <a href="/about.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">About Me</a>
+                <a href="/contact.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Contact Me</a>
+            </div>
         </div>
     </header>
 
-    <nav class="nav-class">
-        <div class="nav-list-div">
-            <ul>
-                <li><a href="/contact.html">Contact Me</a></li>
-                <li><a href="/portfolio.html">My Portfolio</a></li>
-                <li><a href="/about.html">About Me</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main class="space-y-12">
+            <!-- Hero Section -->
+            <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 p-8 md:p-12 space-y-6">
+                        <h2 class="text-4xl font-bold text-gray-900 dark:text-white">Hi, I'm Kayden Cormier</h2>
+                        <p class="text-xl text-gray-700 dark:text-gray-300">A passionate software developer and cybersecurity enthusiast from Sault Ste. Marie, Ontario.</p>
+                        <div class="flex space-x-4">
+                            <a href="/portfolio.html" class="inline-block px-6 py-3 bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-900 rounded-lg hover:opacity-90 transition-opacity">View My Work</a>
+                            <a href="/contact.html" class="inline-block px-6 py-3 border-2 border-accent-light dark:border-accent-dark text-gray-900 dark:text-white rounded-lg hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all">Get in Touch</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:shrink-0 flex items-center justify-end">
+                        <img src="images/kayden.jpg" alt="Kayden Cormier" class="h-96 w-full object-contain object-right md:h-[600px]" />
+                    </div>
+                </div>
+            </section>
 
-    <div class="width-wrap">
-        <main class="main-class">
-            <section id="about-me">
-                <h3>Kayden Cormier</h3>
-            </br>
-                <img src="images/kayden.jpg" alt="Kayden Cormier" class="profile-pic" width="300px" height="450px"/>
-        </br>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">Who am I?</h2>
-                        <div class="accordion-content">
-                            <p>Hi, I'm Kayden Cormier, a passionate software developer, full-stack enthusiast, and cybersecurity hobbyist. My journey into the world of technology began in high school, where I discovered my love for coding and problem-solving.</p>
-                            <p>Currently, I'm in my second year of the Computer Programming program at Sault College, where I am honing my skills and expanding my knowledge in various domains of software development.</p>
-                            <p>In my free time, I enjoy exploring new technologies, making changes to and debugging my own code, and making new programs and software from random and fun ideas I get. My diverse interests in technology drive me to continuously learn and innovate.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">What are my skills?</h2>
-                        <div class="accordion-content">
-                            <p>Here are some of the technical skills I've developed:</p>
-                            <ul>
-                                <li><strong>Programming Languages:</strong> Proficient in Python, Java/Kotlin, HTML/CSS, and JavaScript. I have used these languages to develop various applications, including web applications, automation scripts, and some other apps and software to assist me or do fun things.</li>
-                                <li><strong>Tools:</strong> Experienced with Microsoft Office Apps (Word, Excel, Powerpoint, etc...) and Adobe Suite (Premiere Pro, Photoshop, InDesign). I have utilized these tools for project documentation, video editing, graphic design, and creating promotional materials.</li>
-                                <li><strong>Computer Repairs:</strong> Skilled in BIOS configuration, hardware troubleshooting, and software installation. I have successfully repaired and upgraded numerous computers, ensuring optimal performance and reliability.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">What are my current projects?</h2>
-                        <div class="accordion-content">
-                            <p>I work on fun side projects that solve quirky problems or create amusing applications. Here are a few of my current projects:</p>
-                            <ul>
-                                <li><strong>Pokémon Search App:</strong> A web application that allows users to search for Pokémon and view detailed information. This project involves using APIs, JavaScript, and responsive design techniques.</li>
-                                <li><strong>Inventory Management App:</strong> A desktop application designed to help me manage inventory for my little hobby store. This project includes features like stock tracking, order management, and reporting.</li>
-                                <li><strong>Online Hobby Store:</strong> An e-commerce platform for hobby enthusiasts to buy items from me. This project involves full-stack development, including front-end design, back-end logic, and database management.</li>
-                                <li><strong>Discord Bot:</strong> A versatile bot for Discord servers that offers moderation, fun commands, and utility features. I am constantly fixing bugs and adding new features to enhance its functionality. You can check out the <a href="https://kaydonbot.xyz/">website</a> for more details.</li>
-                                <li><strong>Personal Website:</strong> This site is also one of my active projects. It serves as my portfolio and a platform to showcase my work and skills.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">What are my future goals?</h2>
-                        <div class="accordion-content">
-                            <p>I aim to transition into full-time development to make my ideas accessible to a wider audience. My future goals include:</p>
-                            <ul>
-                                <li>Expanding my knowledge in cybersecurity and exploring potential career opportunities in this field.</li>
-                                <li>Learning new programming languages such as C, C++, and C# to broaden my skill set and enhance my versatility as a developer.</li>
-                                <li>Continuing to develop and improve my personal projects, with the goal of launching them to a broader audience.</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- Quick Links Section -->
+            <section class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-4 hover:transform hover:scale-105 transition-transform">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">My Portfolio</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Explore my latest projects and see what I've been working on.</p>
+                    <a href="/portfolio.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity inline-block">View Projects →</a>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-4 hover:transform hover:scale-105 transition-transform">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">About Me</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Learn more about my journey, skills, and what drives me as a developer.</p>
+                    <a href="/about.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity inline-block">Read More →</a>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-4 hover:transform hover:scale-105 transition-transform">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Get in Touch</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Have a project in mind? Let's discuss how we can work together.</p>
+                    <a href="/contact.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity inline-block">Contact Me →</a>
                 </div>
             </section>
         </main>
     </div>
 
-    <div id="coffee">
-        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+    <div id="coffee" class="fixed bottom-20 left-4 z-50 hover:opacity-90 transition-opacity">
+        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="h-[60px] w-[217px]">
+        </a>
     </div>
 
-    <div> 
-        <button id="back-to-top" title="Back to top">⇡</button>
-    </div>
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-100 p-4 rounded-lg shadow-lg hover:opacity-90 transition-opacity hidden">
+        ⇡
+    </button>
 
-    <footer class="footer-class">
-        <div class="footer-content">
-            <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank">
-                    <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" width="21px" height="21px">
-                </a>
-                <a href="https://github.com/kaydonbob03" target="_blank">
-                    <img src="images/github-mark/github-mark.svg" alt="GitHub" class="github-icon" width="21px" height="21px">
-                </a>
+    <footer class="bg-gray-800 dark:bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <p id="copyright" class="text-gray-100 dark:text-gray-100">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                    <a href="https://github.com/kaydonbob03" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/github-mark/github-mark.svg" alt="GitHub" class="w-6 h-6 github-icon">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/copyright.js"></script>
-    <script src="scripts/hamburger.js"></script>
     <script src="scripts/darkmode.js"></script>
-    <script src="scripts/accordion.js"></script>
     <script src="scripts/top.js"></script>
+    <script src="scripts/mobile-menu.js"></script>
 </body>
 
 </html>

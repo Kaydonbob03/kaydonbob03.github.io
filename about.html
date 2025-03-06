@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <title>About Me</title>
@@ -15,98 +15,457 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/tailwind.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="body-class">
+<body class="bg-primary-light dark:bg-primary-dark">
+    <header class="bg-accent-light dark:bg-accent-light shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-900">About Me</h1>
+                </div>
+                
+                <!-- Menu buttons -->
+                <div class="flex items-center gap-4">
+                    <button id="mobile-menu-button" class="text-gray-900 hover:text-accent-dark md:hidden">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
 
-    <header class="header-class">
-        <button class="hamburger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
-        <div class="title-div">
-            <h1>Kayden Cormier - About Me</h1>
+                <!-- Desktop navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Home</a>
+                    <a href="/portfolio.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">My Portfolio</a>
+                    <a href="/about.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:bg-accent-dark">About Me</a>
+                    <a href="/contact.html" class="text-gray-900 dark:text-gray-900 hover:text-accent-dark relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent-dark hover:after:w-full after:transition-all">Contact Me</a>
+                    <button id="mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <!-- Sun icon -->
+                            <path class="dark:hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <!-- Moon icon -->
+                            <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
         </div>
 
-        <div id="mode-toggle-container">
-            <button id="mode-toggle">
-                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
-            </button>
+        <!-- Mobile navigation menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-accent-light dark:bg-accent-light">
+                <a href="/index.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Home</a>
+                <a href="/portfolio.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">My Portfolio</a>
+                <a href="/about.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 bg-gray-200 dark:bg-gray-700 rounded-md">About Me</a>
+                <a href="/contact.html" class="block px-3 py-2 text-gray-900 dark:text-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md">Contact Me</a>
+            </div>
         </div>
     </header>
 
-    <nav class="nav-class">
-        <div class="nav-list-div">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">My Portfolio</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main class="space-y-12">
+            <section class="space-y-8">
+                <!-- Profile Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:shrink-0">
+                            <img src="images/kayden.jpg" alt="Kayden Cormier" class="h-96 w-full object-cover object-center md:h-full md:w-96"/>
+                        </div>
+                        <div class="p-8 md:p-12 space-y-4">
+                            <h3 class="text-3xl font-bold text-gray-900 dark:text-white">About Me</h3>
+                            <p class="text-lg text-gray-700 dark:text-gray-300">
+                                Hi, I'm Kayden Cormier, a passionate software developer from Sault Ste. Marie, Ontario. My journey in technology started early, growing up with a Super Nintendo and later a Wii, which sparked my love for gaming and eventually programming.
+                            </p>
+                            <p class="text-lg text-gray-700 dark:text-gray-300">
+                                Currently, I'm in my second year of the Computer Programming program at Sault College, where I'm developing my skills in full-stack development and exploring cybersecurity. My path here wasn't direct - after a year at Algoma University, I realized I preferred the hands-on, practical approach of college education over theoretical university studies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="width-wrap">
-        <main class="main-class">
-            <section id="about-me">
-                <h3>About Me</h3>
-                <img src="images/kayden.jpg" alt="Kayden Cormier" class="profile-pic" width="300px" height="450px"/>
-                <p>Hi, I'm Kayden Cormier, a passionate software developer, full-stack enthusiast, cybersecurity hobbyist, and gamer. Currently, I'm in my second year of the Computer Programming program at Sault College with intentions to go back for a year of cybersecurity or for the advanced diploma, I havent decided yet.</p>
-                
-                <h3>Biography</h3>
-                <p>Currently writing a biography for myself. Will put everything here when its done. This page is a work in progress</p>
-                
-                <!-- <h3>Hobbies and Interests</h3>
-                <p>When I'm not coding, I enjoy a variety of hobbies and interests that keep me engaged and inspired:</p>
-                <ul>
-                    <li><strong>Gaming:</strong> I love playing video games, especially those that challenge my strategic thinking and problem-solving skills.</li>
-                    <li><strong>Reading:</strong> I enjoy reading books on technology, cybersecurity, and science fiction.</li>
-                    <li><strong>Outdoor Activities:</strong> Hiking, biking, and exploring nature help me stay active and refreshed.</li>
-                    <li><strong>Music:</strong> I play the guitar and enjoy composing my own music.</li>
-                </ul>
-                
-                <h3>Skills and Experience</h3>
-                <p>Here are some of the technical skills I've developed:</p>
-                <ul>
-                    <li><strong>Programming Languages:</strong> Python, Java, HTML, CSS</li>
-                    <li><strong>Tools:</strong> Microsoft Office Apps, Adobe (Premiere Pro, Photoshop, InDesign)</li>
-                    <li><strong>Computer Repairs:</strong> BIOS, Hardware, Software</li>
-                </ul>
-                <p>Throughout my academic and personal projects, I have applied these skills to develop various applications, from web applications to game prototypes. My experience includes working with different teams, managing projects, and continuously learning new technologies.</p>
-                
-                <h3>Future Goals</h3>
-                <p>I aim to transition into full-time development to make my ideas accessible to a wider audience. I also plan to expand my skill set by learning C, C++, and C# in the future. Additionally, I would like to pursue my hobby of cybersecurity more and maybe see about future employment in that field.</p>
-                <p>My long-term goal is to contribute to innovative projects that have a positive impact on society. I am particularly interested in areas such as artificial intelligence, cybersecurity, and game development. I believe that technology has the power to transform lives, and I am excited to be a part of that journey.</p> -->
+                <!-- Skills Section -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Skills & Experience</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Programming Languages</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Python</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Java</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">HTML</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">CSS</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">JavaScript</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Tools & Software</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Microsoft Office</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Adobe Premiere Pro</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Photoshop</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">InDesign</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Computer Repairs</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">BIOS</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Hardware</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Software</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hobbies Section -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Hobbies & Interests</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-accent-light dark:text-accent-dark mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Gaming</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Strategic thinking and problem-solving through video games, with a special love for Nintendo titles</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-accent-light dark:text-accent-dark mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                </svg>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Card Collecting</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Passionate collector of Pokémon cards and Magic: The Gathering, combining hobby with entrepreneurship</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-accent-light dark:text-accent-dark mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                                </svg>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Tabletop Gaming</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Enthusiast of board games and D&D, enjoying both collecting and playing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-accent-light dark:text-accent-dark mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Reading</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Technology, cybersecurity, and science fiction</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-6 h-6 text-accent-light dark:text-accent-dark mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                </svg>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Outdoor Activities</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Hiking, biking, and exploring nature</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Goals Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Future Goals</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            I aim to transition into full-time development to make my ideas accessible to a wider audience. I also plan to expand my skill set by learning C, C++, and C# in the future. Additionally, I would like to pursue my hobby of cybersecurity more and maybe see about future employment in that field.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My long-term goal is to contribute to innovative projects that have a positive impact on society. I am particularly interested in areas such as artificial intelligence, cybersecurity, and game development. I believe that technology has the power to transform lives, and I am excited to be a part of that journey.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Gaming Background Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Gaming & Early Tech Journey</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My passion for technology was deeply influenced by gaming. My top games of all time include:
+                        </p>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                            <li>Super Mario Galaxy</li>
+                            <li>The Legend of Zelda: Ocarina of Time</li>
+                            <li>The Legend of Zelda: Breath of the Wild</li>
+                            <li>Super Mario World</li>
+                            <li>Stardew Valley</li>
+                        </ol>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My programming journey began in elementary school with a summer program in game development. Though it started with block coding, it planted the seed for my future in software development. This early exposure, combined with my natural curiosity about how computers work, led me to discover my true passion in high school computer science classes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technical Journey Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Technical Journey</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My technical journey began with HTML/CSS in grade 9, followed by Python in grade 10. Since then, I've embraced the world of programming through various projects. The emergence of ChatGPT in late 2022 opened new learning opportunities, leading to my first major project working with OpenAI's API.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            One of my proudest achievements is creating and maintaining a Discord bot, hosted on a modified Raspberry Pi 3B that I converted into a personal cloud server. This project led to developing my first documentation website at kaydonbot.xyz.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My interest in cybersecurity developed through self-study and mentorship from a fellow student who practiced ethical hacking. This combination of web development and security knowledge has shaped my approach to creating robust, secure applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Entrepreneurial Journey Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Entrepreneurial Journey</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            K-Games&Collectables represents the intersection of my programming skills and personal passions. As an enthusiast of Pokémon cards, Magic: The Gathering, board games, and D&D, I decided to transform my hobby into a business venture. Rather than relying on expensive third-party platforms, I'm developing a complete e-commerce solution from the ground up.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            This project has become my most rewarding technical challenge, encompassing:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                            <li>Custom API development</li>
+                            <li>E-commerce platform creation</li>
+                            <li>Inventory management system</li>
+                            <li>Secure payment processing</li>
+                            <li>Customer relationship management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Learning Approach Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Learning Philosophy</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My approach to learning is hands-on and project-driven. I believe in "learning by doing" and leveraging modern tools, including AI-powered assistants like ChatGPT, to enhance my understanding and problem-solving capabilities. This practical approach has helped me build a strong foundation in both front-end and back-end development.
+                        </p>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Current Learning Focus:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Full-Stack Development</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">API Design</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Cybersecurity</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Cloud Services</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">AI Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expanded Future Goals Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Vision & Future Goals</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Looking ahead, my primary focus is to establish myself as a full-stack developer. While I'm also intrigued by cybersecurity, I'm exploring how to potentially combine my early passion for law enforcement with my technology skills, perhaps through roles at organizations like the RCMP or CSIS.
+                        </p>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Short-term Goals:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                                <li>Complete my Computer Programming diploma at Sault College</li>
+                                <li>Launch the full K-Games&Collectables e-commerce platform</li>
+                                <li>Build a strong portfolio of full-stack web applications</li>
+                                <li>Explore advanced web development technologies and frameworks</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Long-term Vision:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                                <li>Secure a position as a full-stack web developer</li>
+                                <li>Potentially explore cybersecurity roles with law enforcement agencies</li>
+                                <li>Continue growing K-Games&Collectables</li>
+                                <li>Contribute to open-source projects and the developer community</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mt-6">
+                            I'm excited about the diverse opportunities in technology, whether that leads me to creating innovative web applications or potentially combining my technical skills with law enforcement in organizations like RCMP or CSIS. The beauty of technology is that it opens doors to many different career paths.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education & Career Path Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Educational Journey</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My career path wasn't always clear. Throughout my childhood and up until grade 11, I was determined to become a police officer. However, my experience with computer science courses in high school opened my eyes to the world of programming. The ability to bring ideas to life through code fascinated me and ultimately led to a complete shift in my career aspirations.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            After high school, I initially enrolled in Computer Science at Algoma University. However, I found that the theoretical approach didn't align with my hands-on learning style. This realization led me to transfer to Sault College's Computer Programming program, where the practical, application-focused curriculum better suited my learning preferences.
+                        </p>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Key Educational Milestones:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                                <li>Early exposure to programming through summer game development programs</li>
+                                <li>High school computer science courses that sparked my passion</li>
+                                <li>One year at Algoma University in Computer Science</li>
+                                <li>Currently pursuing Computer Programming diploma at Sault College</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Modern Technology Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Embracing Modern Technology</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            The launch of ChatGPT in November 2022 marked a significant milestone in my learning journey. I quickly recognized the potential of AI as a learning tool and began exploring its capabilities beyond basic interactions. This led to my first major project working with OpenAI's API, demonstrating my ability to adapt to and leverage emerging technologies.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            I'm particularly optimistic about the role of chat-based Large Language Models (LLMs) in education. These tools have enhanced my learning process, allowing me to dive deeper into complex topics and gain practical understanding beyond traditional classroom instruction.
+                        </p>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">AI Projects & Experience:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                                <li>Developed applications utilizing OpenAI's API</li>
+                                <li>Created AI-enhanced learning tools</li>
+                                <li>Integrated AI capabilities into personal projects</li>
+                                <li>Explored AI's potential in web development and automation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Projects Showcase -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Technical Projects & Infrastructure</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            One of my notable achievements involves repurposing a Raspberry Pi 3B into a versatile server. I modified the hardware with heat sinks and a cooling fan, transforming it into a reliable platform that runs Ubuntu Server. This setup now hosts my Discord bot and serves as my personal cloud storage solution.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            This project led to the development of my first documentation website at kaydonbot.xyz, hosted on GitHub Pages. The experience taught me valuable lessons about server management, documentation, and maintaining live services.
+                        </p>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Infrastructure Highlights:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                                <li>Custom-modified Raspberry Pi server setup</li>
+                                <li>Discord bot development and hosting</li>
+                                <li>Personal cloud storage implementation</li>
+                                <li>Documentation website creation and maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming Influence Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Gaming & Problem-Solving</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Nintendo games have been a significant influence in my life, teaching me valuable problem-solving skills and creative thinking. From the intricate puzzles in The Legend of Zelda series to the precise timing in Super Mario games, these experiences have shaped my approach to tackling complex programming challenges.
+                        </p>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Gaming Skills Transfer:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-4">
+                                <li>Problem decomposition from puzzle-solving games</li>
+                                <li>Resource management from strategy games</li>
+                                <li>Attention to detail from exploration games</li>
+                                <li>Pattern recognition from platformers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Focus Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Cybersecurity Journey</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My interest in cybersecurity grew naturally from my programming studies and was significantly influenced by collaboration with peers, particularly a fellow student who practiced ethical hacking. This exposure opened my eyes to the critical importance of security in modern software development.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            I've developed a particular interest in web application security, API protection, and secure coding practices. These skills have become increasingly valuable as I develop my e-commerce platform and other web-based projects.
+                        </p>
+                        <div class="mt-6">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Security Focus Areas:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Web Security</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">API Security</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Ethical Hacking</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Network Security</span>
+                                <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Security Best Practices</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Expertise Section -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6 mt-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Technical Expertise</h3>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 dark:text-gray-300">
+                            My technical journey has equipped me with a diverse skill set, ranging from front-end development to server management. I'm particularly proud of my ability to handle full-stack projects independently, from conception to deployment.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Development Tools:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">VS Code</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Git</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">GitHub</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Cursor</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Frameworks & Libraries:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Node.js</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Python</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">React</span>
+                                    <span class="px-3 py-1 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-full text-sm">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
 
-    <div id="coffee">
-        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;"></a>
+    <div id="coffee" class="fixed bottom-20 left-4 z-50 hover:opacity-90 transition-opacity">
+        <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="h-[60px] w-[217px]">
+        </a>
     </div>
 
-    <div> 
-        <button id="back-to-top" title="Back to top">⇡</button>
-    </div>
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-100 p-4 rounded-lg shadow-lg hover:opacity-90 transition-opacity hidden">
+        ⇡
+    </button>
 
-    <footer class="footer-class">
-        <div class="footer-content">
-            <p id="copyright">Copyright © 2024 All rights reserved - Kayden Cormier</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank">
-                    <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" width="21px" height="21px">
-                </a>
-                <a href="https://github.com/kaydonbob03" target="_blank">
-                    <img src="images/github-mark/github-mark.svg" alt="GitHub" class="github-icon" width="21px" height="21px">
-                </a>
+    <footer class="bg-gray-800 dark:bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex justify-between items-center">
+                <p id="copyright" class="text-gray-100 dark:text-gray-100">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                    <a href="https://github.com/kaydonbob03" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="images/github-mark/github-mark.svg" alt="GitHub" class="w-6 h-6 github-icon">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/mobile-menu.js"></script>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/accordion.js"></script>
+    <script src="scripts/top.js"></script>
 </body>
 
 </html>
