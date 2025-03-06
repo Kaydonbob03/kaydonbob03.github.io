@@ -18,16 +18,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="scripts/tailwind.config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes glitch {
+            0% { opacity: 1; transform: translateX(0); }
+            20% { opacity: 0.8; transform: translateX(3px); }
+            40% { opacity: 1; transform: translateX(-3px); }
+            60% { opacity: 0.8; transform: translateX(3px); }
+            80% { opacity: 1; transform: translateX(-3px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        .glitch-text {
+            display: inline-block;
+            animation: glitch 0.8s ease-in-out infinite alternate;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            animation-delay: 1.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 
-<body class="bg-primary-light dark:bg-primary-dark">
+<body class="bg-primary-light dark:bg-primary-dark text-gray-900 dark:text-gray-100">
     <header class="bg-accent-light dark:bg-accent-light shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-900">404 - Page Not Found</h1>
                 </div>
-                
                 
                 <!-- Menu buttons -->
                 <div class="flex items-center gap-4">
@@ -75,22 +97,14 @@
         </div>
     </header>
 
-    <div class="min-h-[calc(100vh-4rem)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col">
-        <main class="space-y-8 flex-grow">
-            <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
-                <h3 class="text-3xl font-bold text-gray-900 dark:text-white text-center">Oh Nooooooooo! That page could not be found</h3>
-                <p class="text-lg text-gray-700 dark:text-gray-300 text-center">Sorry, but the page you were looking for does not seem to exist here. Perhaps you made a typo? Or are you a time traveller from the future, where that page exists on this site?</p>
-                <p class="text-lg text-gray-700 dark:text-gray-300 text-center">Whatever the reason is, the links below may help you find your way! :)</p>
-                
-                <div class="flex flex-col items-center space-y-4">
-                    <a href="index.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">Home</a>
-                    <a href="portfolio.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">My Portfolio</a>
-                    <a href="about.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">About Me</a>
-                    <a href="contact.html" class="text-accent-light dark:text-accent-dark hover:opacity-80 transition-opacity text-lg">Contact Me</a>
-                </div>
-            </section>
-        </main>
+    <div class="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-5xl font-bold text-gray-900 dark:text-gray-100">
+            Are you going back to <span id="error-code" class="glitch-text">505</span>?
+        </h1>
+        <p id="reveal-text" class="text-xl mt-4 fade-in hidden text-gray-900 dark:text-gray-100">Oh wait; this is 404 😭</p>
+        <a href="/index.html" class="mt-6 px-6 py-3 bg-accent-light dark:bg-accent-dark text-gray-900 dark:text-gray-900 rounded-lg hover:bg-accent-dark dark:hover:bg-accent-light hover:text-gray-100 dark:hover:text-gray-900 transition text-lg font-semibold">I guess I'll go back...</a>
     </div>
+
 
     <div id="coffee" class="fixed bottom-20 left-4 z-50 hover:opacity-90 transition-opacity">
         <a href="https://www.buymeacoffee.com/kaydonbob03" target="_blank">
@@ -118,6 +132,12 @@
         </div>
     </footer>
 
+    <script>
+        setTimeout(() => {
+            document.getElementById('error-code').innerText = '404';
+            document.getElementById('reveal-text').classList.remove('hidden');
+        }, 2500);
+    </script>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/top.js"></script>
     <script src="scripts/mobile-menu.js"></script>
