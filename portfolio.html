@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#ffffff" />
     <meta name="author" content="Kayden Cormier" />
     <meta description="Developer Portfolio for Kayden Cormier"/>
+    <meta name="copyright" content="Kayden Cormier" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/accordion.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
@@ -86,6 +87,7 @@
                     <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project3')">Discord Bot</button>
                     <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project4')">GPT Work</button>
                     <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project5')">K-Games&Collectables</button>
+                    <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project6')">Capstone Project</button>
                 </div>
 
                 <!-- Project 1 Content -->
@@ -301,6 +303,44 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Project 6 Content -->
+                <div id="Project6" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">Capstone Project & SPOT Collaboration</h4>
+                    <p class="text-gray-700 dark:text-gray-300">During my final year of the Computer Programming program at Sault College, I served as the <strong>team lead</strong> on our Capstone project. Our client was the program coordinator of the Robotics and Mechatronics department at Sault College. Our goal was to build a secure internal dashboard for managing, monitoring, and tracking the activity and mission data of SPOT—the Boston Dynamics quadruped robot used for education and research.</p>
+                    <p class="text-gray-700 dark:text-gray-300">As team lead, I was responsible for managing the team, which brought its fair share of challenges. Through determination and communication, I overcame these challenges and grew significantly as a leader. This experience directly helped me grow professionally and personally, contributing to my promotion to <strong>Shift Supervisor at Starbucks</strong> shortly after graduating college (June 2025).</p>
+                    <p class="text-gray-700 dark:text-gray-300">In addition to my leadership duties, I was solely responsible for the entire web application—this included backend development using Flask, frontend design using Tailwind CSS, and database structure with MySQL. Web development is my strongest suit in software, and I took ownership of every element of the dashboard system. I also handled authentication and authorization layers, secure routing, data validation, and version control through Git and GitHub.</p>
+                    <p class="text-gray-700 dark:text-gray-300">I delegated the robotics-focused portions of the project—including telemetry handling and robot-side task automation—to my teammates. I used Azure DevOps for project management, milestone tracking, and delegating technical responsibilities in an organized and collaborative manner.</p>
+                    
+                    <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Public Access</u></h5>
+                    <p class="text-gray-700 dark:text-gray-300">We provided a non-admin test account so the public can explore the dashboard and see how the application works. Unfortunatly, the account is not admin, so it is limited in what it can access due to the sensitive nature of the data. If you would like to learn more about the project, see all it can do, or have any questions, please feel free to <a href="/contact.html" class="text-accent-light dark:text-accent-dark hover:opacity-80">contact me</a>.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                        <li><strong>URL:</strong> <a href="https://spot.kaydencormier.dev" class="text-accent-light dark:text-accent-dark hover:opacity-80">https://spot.kaydencormier.dev</a></li>
+                        <li><strong>Username:</strong> <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">viewer</code></li>
+                        <li><strong>Password:</strong> <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">h12wXt</code> (case-sensitive)</li>
+                    </ul>
+                    
+                    <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Key Features</u></h5>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Role-based secure login system (Admin, Instructor, Viewer)</li>
+                        <li>Mission and task tracking system</li>
+                        <li>Robot telemetry log viewer</li>
+                        <li>Custom form generation for incident reports and SPOT logs</li>
+                        <li>Responsive UI built with Tailwind CSS</li>
+                    </ul>
+                    
+                    <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Technology Stack</u></h5>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Python (Flask Framework)</li>
+                        <li>Tailwind CSS (Frontend Styling)</li>
+                        <li>MySQL (Database)</li>
+                        <li>Git & GitHub (Version Control)</li>
+                        <li>Azure DevOps (Project Management)</li>
+                    </ul>
+                    
+                    <h5 class="text-xl font-semibold text-gray-900 dark:text-white mt-6"><u>Impact</u></h5>
+                    <p class="text-gray-700 dark:text-gray-300">The application provided a centralized, easy-to-use system for instructors to manage SPOT's educational and research activities. It streamlined task planning, data review, and administrative oversight for one of the college's most advanced robotic assets.</p>
+                </div>
             </section>
         </main>
     </div>
@@ -318,7 +358,7 @@
     <footer class="bg-gray-800 dark:bg-gray-800 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="flex justify-between items-center">
-                <p id="copyright" class="text-gray-100 dark:text-gray-100">Copyright © 2024 All rights reserved - Kayden Cormier</p>
+                <p id="copyright" class="text-gray-100 dark:text-gray-100">Copyright © 2025 All rights reserved - Kayden Cormier</p>
                 <div class="flex space-x-4">
                     <a href="https://www.linkedin.com/in/kayden-cormier" target="_blank" class="hover:opacity-80 transition-opacity">
                         <img src="images/LinkedIn-Logos/LI-In-Bug.png" alt="LinkedIn" class="w-6 h-6">

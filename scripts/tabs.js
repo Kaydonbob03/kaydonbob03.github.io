@@ -15,4 +15,14 @@ function openProject(evt, projectName) {
 // Open the first tab by default
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".tablinks").click();
+    const hash = window.location.hash;
+    if (hash) {
+        const tabId = hash.substring(1);
+        const tabButton = document.querySelector(`.tablinks[onclick*='${tabId}']`);
+        const tabContent = document.getElementById(tabId);
+        if (tabButton && tabContent) {
+            tabButton.click();
+            tabContent.scrollIntoView({ behavior: "smooth" });
+        }
+    }
 });
