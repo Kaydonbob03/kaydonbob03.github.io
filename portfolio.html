@@ -88,6 +88,7 @@
                     <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project4')">GPT Work</button>
                     <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project5')">K-Games&Collectables</button>
                     <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Project6')">Capstone Project</button>
+                    <button class="tablinks px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-md hover:bg-accent-light dark:hover:bg-accent-dark hover:text-gray-900 transition-all" onclick="openProject(event, 'Numyn')">Numyn Software</button>
                 </div>
 
                 <!-- Project 1 Content -->
@@ -95,10 +96,11 @@
                     <h4 class="text-2xl font-semibold text-gray-900 dark:text-white">My Projects</h4>
                     <div class="prose dark:prose-invert max-w-none">
                         <p class="text-gray-700 dark:text-gray-300">On this page you will find information about all of the side projects and things I've done as a programmer.</p>
-                        <p class="text-gray-700 dark:text-gray-300">You can navigate the tabs above to see information on each project. Under every project will be a GitHub link to the repo.</p>
+                        <p class="text-gray-700 dark:text-gray-300">You can navigate the tabs above to see information on each project. Public repositories are linked where available; some business software is privately developed.</p>
                         
                         <p class="text-gray-900 dark:text-white font-semibold mt-6">Below is a quick list of my projects:</p>
                         <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                            <li>Numyn Software -- My software business, developing bookkeeping tools for Canadian small businesses alongside software development and IT services</li>
                             <li>Personal Webpage -- The website you are currently on. Made to showcase everything I've programmed and pose as my programmer's CV</li>
                             <li>Discord Bot -- kaydonbot is an all-purpose discord bot</li>
                             <li>Website for Discord Bot -- A website for documentation and information on my discord bot</li>
@@ -107,6 +109,55 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Numyn Software -->
+                <section id="Numyn" aria-labelledby="numyn-title" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <h4 id="numyn-title" class="text-2xl font-semibold text-gray-900 dark:text-white">Numyn Software</h4>
+                        <span class="inline-block px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium">In development · Targeting 2027</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">Numyn Software is my software business, where I build practical tools for small businesses and offer software development and IT services. Its main product is Numyn, a bookkeeping application shaped by the day-to-day needs of running my own collectibles business, K-Games&amp;Collectables.</p>
+                    <p class="text-gray-700 dark:text-gray-300">I am developing Numyn with Python, Flask, and SQLite, taking it from a tool I use in my own business toward a licensed public release for Canadian sole proprietors and small businesses.</p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="rounded-lg bg-gray-50 dark:bg-gray-900 p-6 space-y-4">
+                            <h5 class="text-xl font-semibold text-gray-900 dark:text-white">Bookkeeping that starts with real use</h5>
+                            <p class="text-gray-700 dark:text-gray-300">The current application brings income, expenses, invoices, and Canadian GST/HST tracking together. Development focuses on making everyday record keeping and reporting easier to manage.</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                                <li>Income and expense records, with reporting and exports</li>
+                                <li>Invoices and generated business documents</li>
+                                <li>GST/HST collected and input tax credit tracking</li>
+                                <li>Local data storage using SQLite</li>
+                            </ul>
+                        </div>
+                        <div class="rounded-lg bg-gray-50 dark:bg-gray-900 p-6 space-y-4">
+                            <h5 class="text-xl font-semibold text-gray-900 dark:text-white">Preparing for public release</h5>
+                            <p class="text-gray-700 dark:text-gray-300">Upcoming work centres on a more complete bookkeeping core and an easier setup experience.</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                                <li>Expanded liability tracking, including gift cards and store credit</li>
+                                <li>More forms and document generation tools</li>
+                                <li>Application settings and simpler configuration</li>
+                                <li>Licensing and packaging for public distribution</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-accent-light dark:border-accent-dark pl-6 space-y-3">
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white">Launch plans</h5>
+                        <p class="text-gray-700 dark:text-gray-300">I am targeting <strong>Q1 2027 (January–March)</strong> for the initial public release, with a possible move to <strong>Q2 2027 (April–June)</strong> as development and testing progress. This is a planning window; a firm launch date has not been announced.</p>
+                        <p class="text-gray-700 dark:text-gray-300">Longer-term plans include optional add-ons for inventory, payroll, tax preparation support, and industry-specific workflows. These are roadmap items with no confirmed release dates.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Roadmap updated October 2026. Features and timing may change as the application develops.</p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h5 class="text-xl font-semibold text-gray-900 dark:text-white">Software Development &amp; IT Services</h5>
+                        <p class="text-gray-700 dark:text-gray-300">Alongside Numyn's bookkeeping tools, I offer software development and IT services through Numyn Software. For project enquiries, contact <a href="mailto:hello@numyn.ca" class="text-gray-900 dark:text-white underline underline-offset-4 hover:opacity-80">hello@numyn.ca</a>.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://numyn.ca" class="inline-block px-6 py-3 bg-accent-light dark:bg-accent-dark text-gray-900 rounded-lg hover:opacity-90 transition-opacity">Explore Numyn</a>
+                        <a href="mailto:hello@numyn.ca" class="inline-block px-6 py-3 border-2 border-accent-light dark:border-accent-dark text-gray-900 dark:text-white rounded-lg hover:opacity-80 transition-opacity">Discuss a project</a>
+                    </div>
+                </section>
 
                 <!-- Project 2 Content -->
                 <div id="Project2" class="tabcontent bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
